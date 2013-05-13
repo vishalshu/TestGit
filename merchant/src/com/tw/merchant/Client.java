@@ -3,16 +3,18 @@ package com.tw.merchant;
 public class Client {
 
 	public static void main(String[] args) {
-		InputReader langVocabReader = new ConsoleInputReader();
+		InputReader reader = new ConsoleInputReader();
 		System.out.println("Enter credits for materials. e.g. glob GOLD is 100");
 		do {
-			AbstractExpression expression = new VocabExpression(
-					langVocabReader.next());
+			String expStr = reader.next();
+			
+			AbstractExpression expression = new VocabExpression(expStr
+					);
 			
 			expression.interprete(new Context(
 					new IntergalacticNumeralsVocab()));
 			
-		}while (langVocabReader.hasNext());
+		}while (reader.hasNext());
 
 		
 		InputReader creditsReader = new ConsoleInputReader();

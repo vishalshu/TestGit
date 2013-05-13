@@ -1,10 +1,12 @@
+/**
+ * 
+ */
 package com.tw.merchant;
 
 /**
  * @author vishalshu
- * 
+ *
  */
-public interface MaterialBuilder {
+public class ExpressionParser {
 
-	void parseInput();
 }
