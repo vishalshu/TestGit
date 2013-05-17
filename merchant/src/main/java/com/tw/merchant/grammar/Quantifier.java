@@ -9,7 +9,7 @@ import com.tw.merchant.InvalidNumeralException;
  * @author vishalshu
  *
  */
-public class Quantifier extends Word {
+public class Quantifier extends SentenceToken {
 	public Quantifier() {
 	}
 	

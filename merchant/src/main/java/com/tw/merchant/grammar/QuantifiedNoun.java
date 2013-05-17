@@ -8,7 +8,7 @@ package com.tw.merchant.grammar;
  * @author vishalshu
  * 
  */
-public class QuantifiedNoun extends Word{
+public class QuantifiedNoun extends SentenceToken{
 
 	private Quantifier quantifier;
 	private Noun noun;
