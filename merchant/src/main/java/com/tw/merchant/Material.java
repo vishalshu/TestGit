@@ -46,6 +46,7 @@ public class Material {
 			material.name = materialName;
 		}
 		material.creditsForUnit = creditsForUnit;
+		materials.put(materialName, material);
 		return material;
 	}
 

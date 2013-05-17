@@ -46,8 +46,8 @@ public class Client {
 			
 			parsers.add(createTranslationSentenceParser);
 			parsers.add(materialDefinitoinSentenceParser);
-			parsers.add(translationQuerySentenceParser);
 			parsers.add(creditsQuerySentenceParser);
+			parsers.add(translationQuerySentenceParser);
 			
 			boolean sentenceInterpreted = false;
 
