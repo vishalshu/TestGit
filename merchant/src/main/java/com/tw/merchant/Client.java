@@ -1,72 +1,42 @@
 package com.tw.merchant;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import com.tw.merchant.grammar.CommandResult;
-import com.tw.merchant.grammar.CreateTranslationSentenceConfig;
-import com.tw.merchant.grammar.CreateTranslationSentenceParser;
-import com.tw.merchant.grammar.MaterialCreditsQuerySentenceConfig;
-import com.tw.merchant.grammar.MaterialCreditsQuerySentenceParser;
-import com.tw.merchant.grammar.MaterialDefinitionSentenceConfig;
-import com.tw.merchant.grammar.MaterialDefinitionSentenceParser;
+import com.tw.merchant.grammar.InvalidSyntaxException;
 import com.tw.merchant.grammar.Sentence;
-import com.tw.merchant.grammar.SentenceParser;
-import com.tw.merchant.grammar.TranslationQueryConfig;
-import com.tw.merchant.grammar.TranslationQuerySentenceParser;
+import com.tw.merchant.grammar.parser.SentenceParser;
+import com.tw.merchant.grammar.parser.SentenceParserFactory;
 
 public class Client {
 
+	private static Logger logger = LogManager.getRootLogger();
+
 	public static void main(String[] args) {
 		InputReader reader = new ConsoleInputReader();
-		System.out
-				.println("Enter credits for materials. e.g. glob GOLD is 100");
 
-		CreateTranslationSentenceConfig assignmentConfig = new CreateTranslationSentenceConfig();
-		MaterialDefinitionSentenceConfig materialDefinitionConfig = new MaterialDefinitionSentenceConfig();
-		TranslationQueryConfig translationQueryConfig = new TranslationQueryConfig();
-		MaterialCreditsQuerySentenceConfig creditsQuerySentenceConfig = new MaterialCreditsQuerySentenceConfig();
 		do {
-			String sentence = reader.next();
+			logger.info("merchant-guide>");
+			String input = reader.next();
 
-			List<SentenceParser> parsers = new ArrayList<SentenceParser>();
+			SentenceParser parser = SentenceParserFactory.getInstance()
+					.getSentenceParser();
+			try {
+				Sentence sentence = parser.parse(input);
+				CommandResult result = sentence.getCommand().execute();
+				String resultStr = result.getResult();
 
-			CreateTranslationSentenceParser createTranslationSentenceParser = new CreateTranslationSentenceParser(
-					sentence);
-			createTranslationSentenceParser.setConfig(assignmentConfig);
-			
-			MaterialDefinitionSentenceParser materialDefinitoinSentenceParser = new MaterialDefinitionSentenceParser(sentence);
-			materialDefinitoinSentenceParser.setConfig(materialDefinitionConfig);
-			
-			TranslationQuerySentenceParser translationQuerySentenceParser = new TranslationQuerySentenceParser(sentence);
-			translationQuerySentenceParser.setConfig(translationQueryConfig);
-			
-			MaterialCreditsQuerySentenceParser creditsQuerySentenceParser = new MaterialCreditsQuerySentenceParser(sentence);
-			creditsQuerySentenceParser.setConfig(creditsQuerySentenceConfig);
-			
-			parsers.add(createTranslationSentenceParser);
-			parsers.add(materialDefinitoinSentenceParser);
-			parsers.add(creditsQuerySentenceParser);
-			parsers.add(translationQuerySentenceParser);
-			
-			boolean sentenceInterpreted = false;
-
-			for (SentenceParser parser : parsers) {
-				try {
-					Sentence sent = parser.parse();
-					CommandResult result = sent.getCommand().execute();
-					sentenceInterpreted = true;
-					
-					// if(sent.isQuery()){
-					System.out.println(result.getResult());
-					break;
-					// }
-				} catch (InvalidSyntaxException e) {
-					// Fallback to next parser in the list
+				if (sentence.isQuery()) {
+					logger.info(resultStr);
 				}
-			}
-			if (!sentenceInterpreted) {
-				System.out.println("I've no idea what you're talking about.");
+
+				logger.debug("Result of '" + input + "' sentence is : "
+						+ resultStr);
+			} catch (InvalidSyntaxException e) {
+				logger.error(e.getMessage());
+			} catch (InvalidNumeralException e) {
+				logger.error(e.getMessage());
 			}
 		} while (reader.hasNext());
 

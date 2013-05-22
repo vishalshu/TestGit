@@ -4,6 +4,8 @@
 package com.tw.merchant.grammar;
 
 /**
+ * Generalization of artifacts that can go inside a sentence
+ * 
  * @author vishalshu
  * 
  */
@@ -14,7 +16,7 @@ public abstract class SentenceToken {
 	}
 
 	public String getSymbol() {
-		return symbol;
+		return symbol.trim();
 	}
 
 	public void setSymbol(String symbol) {
@@ -23,6 +25,6 @@ public abstract class SentenceToken {
 
 	@Override
 	public String toString() {
-		return symbol.toString();
+		return symbol.toString().trim();
 	}
 }

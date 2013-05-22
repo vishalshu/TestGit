@@ -4,6 +4,8 @@
 package com.tw.merchant.grammar;
 
 /**
+ * Result object to be returned for any command execution.
+ * 
  * @author vishalshu
  * 
  */

@@ -3,25 +3,31 @@
  */
 package com.tw.merchant.grammar;
 
+import com.tw.merchant.AppConfig;
 import com.tw.merchant.InvalidNumeralException;
+import com.tw.merchant.dao.VocabTranslationDao;
+import com.tw.merchant.vocab.PrimaryVocab;
 
 /**
+ * <b>Sentence</b> representation for create translation sentence. <br>
+ * e.g. glob is I. where glob represents a new <UserDefinedQuantifier> to be
+ * mapped, I represents a valid <PrimaryNumeralQuantifier>
+ * 
  * @author vishalshu
  * 
  */
 public class CreateTranslationSentence extends Sentence {
-
-	private TranslatedRomanQuantifier assignee;
+	private UserDefinedQuantifier assignee;
 	private Quantifier assigner;
 
 	public CreateTranslationSentence() {
 	}
 
-	public TranslatedRomanQuantifier getAssignee() {
+	public UserDefinedQuantifier getAssignee() {
 		return assignee;
 	}
 
-	public void setAssignee(TranslatedRomanQuantifier assignee) {
+	public void setAssignee(UserDefinedQuantifier assignee) {
 		this.assignee = assignee;
 	}
 
@@ -39,34 +45,17 @@ public class CreateTranslationSentence extends Sentence {
 	}
 
 	private class CreateTranslationCommand implements Command {
-		public CommandResult execute() {
+		public CommandResult execute() throws InvalidNumeralException {
 			boolean assigned = false;
-			try {
-				Integer value = getAssigner().getValue();
-				boolean isValidAssignment = false;
-				switch (value) {
-				case 1:
-				case 5:
-				case 10:
-				case 50:
-				case 100:
-				case 500:
-				case 1000:
-					isValidAssignment = true;
-					assignee.getTranslation().addTranslation(
-							assignee.getSymbol(), assigner.getSymbol());
-					break;
-				}
+			AppConfig config = AppConfig.getInstance();
+			PrimaryVocab primaryVocab = config.getPrimaryVocab();
 
-				if (!isValidAssignment) {
-					throw new RuntimeException(
-							"Only basic roman numerals can be used for assignment.");
-				}
+			VocabTranslationDao translationDao = config.getDaoFactory()
+					.getVocabTranslationDao(primaryVocab);
 
-			} catch (InvalidNumeralException e) {
-				// TODO This shouldn't come.... Parser should know about invalid
-				// syntax
-			}
+			assigned = translationDao.addTranslation(assignee.getSymbol(),
+					assigner.getSymbol());
+
 			CommandResult result = new CommandResult();
 			result.setResult(Boolean.toString(assigned));
 			return result;
@@ -76,6 +65,12 @@ public class CreateTranslationSentence extends Sentence {
 	@Override
 	public boolean isQuery() {
 		return false;
+	}
+
+	@Override
+	public String toString() {
+		return assignee.getSymbol() + " " + KeyWord.IS + " "
+				+ assigner.getSymbol();
 	}
 
 }

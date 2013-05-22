@@ -7,36 +7,38 @@ import java.util.Scanner;
 
 /**
  * @author vishalshu
- *
+ * 
  */
 public class ConsoleInputReader implements InputReader {
 
 	String lastLine;
-	
+
+	public ConsoleInputReader() {
+		System.out.println("Type 'exit' to end the program");
+	}
+
 	@Override
 	public boolean hasNext() {
-		if(lastLine.equalsIgnoreCase("done")){
-			return false;
-		}
 		return true;
 	}
 
 	@Override
 	public String next() {
 		scanInput();
+		if (lastLine.equalsIgnoreCase("exit")) {
+			Runtime.getRuntime().exit(0);
+		}
 		return lastLine;
 	}
 
 	@Override
 	public void remove() {
-		
+
 	}
 
 	private void scanInput() {
 		Scanner reader = new Scanner(System.in);
 		lastLine = reader.nextLine();
 	}
-
-	
 
 }

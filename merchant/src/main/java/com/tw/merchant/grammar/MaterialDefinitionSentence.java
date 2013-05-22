@@ -3,10 +3,16 @@
  */
 package com.tw.merchant.grammar;
 
+import com.tw.merchant.AppConfig;
 import com.tw.merchant.InvalidNumeralException;
 import com.tw.merchant.Material;
+import com.tw.merchant.dao.MaterialDao;
 
 /**
+ * <b>Sentence</b> representation for material definition sentence. <br>
+ * e.g. glob glob Silver is 300 credits. where glob represents a valid
+ * <Quantifier> and Silver represents a new <Material> to be defined.
+ * 
  * @author vishalshu
  * 
  */
@@ -44,26 +50,25 @@ public class MaterialDefinitionSentence extends Sentence {
 	private class CreateMaterialDefinitionCommand implements Command {
 
 		@Override
-		public CommandResult execute() {
+		public CommandResult execute() throws InvalidNumeralException {
 			CommandResult result = new CommandResult();
 			String msg = Boolean.toString(false);
-			try {
-				Material material = Material
-						.createOrUpdateMaterial(materialNoun.getNoun()
-								.getSymbol(), (double) (creditsNoun
-								.getQuantifier().getValue() / materialNoun
-								.getQuantifier().getValue()));
-				msg = material.getName() + " is "
-						+ material.getCreditsForUnit() + " Credits.";
-			} catch (InvalidNumeralException e) {
-				e.printStackTrace();
-				// TODO: Something went wrong.. this should've been identified
-				// by parser
-			}
+			MaterialDao dao = AppConfig.getInstance().getDaoFactory()
+					.getMaterialDao();
+			Material material = dao.createOrUpdateMaterial(materialNoun
+					.getNoun().getSymbol(), materialNoun.getQuantifier()
+					.getValue(), creditsNoun.getQuantifier().getValue());
+			msg = material.getName() + " is " + material.getCreditsForUnit()
+					+ " Credits.";
+
 			result.setResult(msg);
 			return result;
 		}
+	}
 
+	@Override
+	public String toString() {
+		return materialNoun.getSymbol() + " is " + creditsNoun.getSymbol();
 	}
 
 }

@@ -4,8 +4,10 @@
 package com.tw.merchant;
 
 /**
+ * Represents exceptional condition when the numeral symbol passed is invalid
+ * 
  * @author vishalshu
- *
+ * 
  */
 public class InvalidNumeralException extends Exception {
 
@@ -17,5 +19,5 @@ public class InvalidNumeralException extends Exception {
 	public InvalidNumeralException(String msg) {
 		super(msg);
 	}
-	
+
 }

@@ -13,16 +13,24 @@ public class PatternsFactory {
 
 	private static String[] queryKeywords = { "how many", "how much" };
 	private static String[] assignmentKeywords = { "is" };
+	private static String queryKeywordsRegex;
+	private static String assignmentKeywordsRegex;
 
 	public static Pattern getQueryPattern() {
-		Pattern pattern = Pattern
-				.compile(buildFindAnyPattern(queryKeywords), Pattern.CASE_INSENSITIVE);
+		if (queryKeywordsRegex == null) {
+			queryKeywordsRegex = buildFindAnyPattern(queryKeywords);
+		}
+		Pattern pattern = Pattern.compile(queryKeywordsRegex,
+				Pattern.CASE_INSENSITIVE);
 		return pattern;
 	}
 
 	public static Pattern getAssignmentOperatorPattern() {
-		Pattern pattern = Pattern
-				.compile(buildFindAnyPattern(assignmentKeywords), Pattern.CASE_INSENSITIVE);
+		if (assignmentKeywordsRegex == null) {
+			assignmentKeywordsRegex = buildFindAnyPattern(assignmentKeywords);
+		}
+		Pattern pattern = Pattern.compile(assignmentKeywordsRegex,
+				Pattern.CASE_INSENSITIVE);
 		return pattern;
 	}
 
@@ -37,5 +45,10 @@ public class PatternsFactory {
 			patternBuilder.append("(\\b" + keyword + "\\b)");
 		}
 		return patternBuilder.toString();
+	}
+
+	public static void main(String[] args) {
+		System.out.println(getQueryPattern().matcher("How much credits is pork glob glob Silver ??")
+				.find());
 	}
 }
