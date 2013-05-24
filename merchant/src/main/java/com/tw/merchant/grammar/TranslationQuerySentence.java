@@ -15,7 +15,11 @@ import com.tw.merchant.InvalidNumeralException;
  */
 public class TranslationQuerySentence extends Sentence {
 
-	private UserDefinedQuantifier sourceQuantifier;
+	private String userDefinedNumeral;
+
+	public TranslationQuerySentence(String userDefinedNumeral) {
+		this.userDefinedNumeral = userDefinedNumeral.trim();
+	}
 
 	@Override
 	public Command getCommand() {
@@ -30,11 +34,17 @@ public class TranslationQuerySentence extends Sentence {
 	private class TranslationQueryExecutorCommand implements Command {
 
 		@Override
-		public CommandResult execute() throws InvalidNumeralException {
+		public CommandResult execute() throws InvalidSyntaxException {
 			CommandResult result = new CommandResult();
 			String msg = Boolean.toString(false);
-			msg = sourceQuantifier.getSymbol() + " is "
-					+ sourceQuantifier.getValue();
+			UserDefinedQuantifier quantifier = new UserDefinedQuantifier(
+					userDefinedNumeral);
+
+			try {
+				msg = userDefinedNumeral + " is " + quantifier.getValue().intValue();
+			} catch (InvalidNumeralException e) {
+				throw new InvalidSyntaxException(e);
+			}
 
 			result.setResult(msg);
 			return result;
@@ -42,17 +52,8 @@ public class TranslationQuerySentence extends Sentence {
 
 	}
 
-	public UserDefinedQuantifier getSourceQuantifier() {
-		return sourceQuantifier;
-	}
-
-	public void setSourceQuantifier(UserDefinedQuantifier sourceQuantifier) {
-		this.sourceQuantifier = sourceQuantifier;
-	}
-
 	@Override
 	public String toString() {
-		return sourceQuantifier.toString().trim();
+		return userDefinedNumeral.toString().trim();
 	}
-
 }

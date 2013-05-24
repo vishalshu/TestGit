@@ -14,9 +14,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import com.tw.merchant.interpreter.ExpressionInterpreter;
-import com.tw.merchant.validator.PrimaryVocabRegexValidator;
-import com.tw.merchant.vocab.RomanVocab;
+import com.tw.merchant.vocab.ExpressionInterpreter;
+import com.tw.merchant.vocab.RomanNumeralValidator;
 
 /**
  * @author vishalshu
@@ -45,9 +44,8 @@ public class RomanExpressionInterpreterTest {
 
 	@Before
 	public void setup() {
-		RomanVocab vocab = new RomanVocab();
-		interpreter = new ExpressionInterpreter(vocab,
-				new PrimaryVocabRegexValidator(vocab));
+		interpreter = new ExpressionInterpreter(
+				new RomanNumeralValidator());
 	}
 
 	@Test

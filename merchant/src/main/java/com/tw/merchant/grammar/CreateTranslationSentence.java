@@ -3,10 +3,8 @@
  */
 package com.tw.merchant.grammar;
 
-import com.tw.merchant.AppConfig;
 import com.tw.merchant.InvalidNumeralException;
-import com.tw.merchant.dao.VocabTranslationDao;
-import com.tw.merchant.vocab.PrimaryVocab;
+import com.tw.merchant.vocab.UserDefinedVocab;
 
 /**
  * <b>Sentence</b> representation for create translation sentence. <br>
@@ -17,26 +15,12 @@ import com.tw.merchant.vocab.PrimaryVocab;
  * 
  */
 public class CreateTranslationSentence extends Sentence {
-	private UserDefinedQuantifier assignee;
-	private Quantifier assigner;
+	private String assignee;
+	private String assigner;
 
-	public CreateTranslationSentence() {
-	}
-
-	public UserDefinedQuantifier getAssignee() {
-		return assignee;
-	}
-
-	public void setAssignee(UserDefinedQuantifier assignee) {
-		this.assignee = assignee;
-	}
-
-	public Quantifier getAssigner() {
-		return assigner;
-	}
-
-	public void setAssigner(Quantifier assigner) {
-		this.assigner = assigner;
+	public CreateTranslationSentence(String assignee, String assigner) {
+		this.assignee = assignee.trim();
+		this.assigner = assigner.trim();
 	}
 
 	@Override
@@ -45,19 +29,19 @@ public class CreateTranslationSentence extends Sentence {
 	}
 
 	private class CreateTranslationCommand implements Command {
-		public CommandResult execute() throws InvalidNumeralException {
-			boolean assigned = false;
-			AppConfig config = AppConfig.getInstance();
-			PrimaryVocab primaryVocab = config.getPrimaryVocab();
-
-			VocabTranslationDao translationDao = config.getDaoFactory()
-					.getVocabTranslationDao(primaryVocab);
-
-			assigned = translationDao.addTranslation(assignee.getSymbol(),
-					assigner.getSymbol());
-
+		public CommandResult execute() throws InvalidSyntaxException {
+			
+			UserDefinedVocab userDefinedVocab = UserDefinedVocab.getInstance();
+			
+			try {
+				userDefinedVocab.addTranslation(assignee,
+							assigner);
+			} catch (InvalidNumeralException e) {
+				throw new InvalidSyntaxException(e);
+			}
+			
 			CommandResult result = new CommandResult();
-			result.setResult(Boolean.toString(assigned));
+			result.setResult(Boolean.toString(true));
 			return result;
 		}
 	}
@@ -69,8 +53,7 @@ public class CreateTranslationSentence extends Sentence {
 
 	@Override
 	public String toString() {
-		return assignee.getSymbol() + " " + KeyWord.IS + " "
-				+ assigner.getSymbol();
+		return assignee + " " + KeyWord.IS + " " + assigner;
 	}
 
 }

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.tw.merchant.validator;
+package com.tw.merchant.vocab;
 
 import com.tw.merchant.InvalidNumeralException;
 

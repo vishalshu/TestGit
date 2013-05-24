@@ -6,8 +6,7 @@ import org.apache.log4j.Logger;
 import com.tw.merchant.grammar.CommandResult;
 import com.tw.merchant.grammar.InvalidSyntaxException;
 import com.tw.merchant.grammar.Sentence;
-import com.tw.merchant.grammar.parser.SentenceParser;
-import com.tw.merchant.grammar.parser.SentenceParserFactory;
+import com.tw.merchant.grammar.SentenceParser;
 
 public class Client {
 
@@ -20,8 +19,7 @@ public class Client {
 			logger.info("merchant-guide>");
 			String input = reader.next();
 
-			SentenceParser parser = SentenceParserFactory.getInstance()
-					.getSentenceParser();
+			SentenceParser parser = new SentenceParser();
 			try {
 				Sentence sentence = parser.parse(input);
 				CommandResult result = sentence.getCommand().execute();
@@ -34,8 +32,6 @@ public class Client {
 				logger.debug("Result of '" + input + "' sentence is : "
 						+ resultStr);
 			} catch (InvalidSyntaxException e) {
-				logger.error(e.getMessage());
-			} catch (InvalidNumeralException e) {
 				logger.error(e.getMessage());
 			}
 		} while (reader.hasNext());

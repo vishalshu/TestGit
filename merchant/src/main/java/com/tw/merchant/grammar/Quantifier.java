@@ -12,8 +12,15 @@ import com.tw.merchant.InvalidNumeralException;
  * 
  * @author vishalshu
  */
-public class Quantifier extends SentenceToken {
+public class Quantifier{
 
+	protected String symbol;
+
+	
+	public Quantifier(String symbol) {
+		setSymbol(symbol);
+	}
+	
 	/**
 	 * 
 	 * @return
@@ -29,5 +36,17 @@ public class Quantifier extends SentenceToken {
 		}
 
 	}
+	
+	public String getSymbol() {
+		return symbol.trim();
+	}
 
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
+	}
+
+	@Override
+	public String toString() {
+		return symbol.toString().trim();
+	}
 }

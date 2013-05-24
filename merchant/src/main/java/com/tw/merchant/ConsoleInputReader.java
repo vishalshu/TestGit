@@ -6,6 +6,7 @@ package com.tw.merchant;
 import java.util.Scanner;
 
 /**
+ * Reads inputs from console
  * @author vishalshu
  * 
  */

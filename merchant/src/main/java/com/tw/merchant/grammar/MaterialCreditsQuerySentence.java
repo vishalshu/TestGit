@@ -3,11 +3,10 @@
  */
 package com.tw.merchant.grammar;
 
-import com.tw.merchant.ErrorMessage;
 import com.tw.merchant.InvalidNumeralException;
+import com.tw.merchant.Material;
 import com.tw.merchant.MaterialNotFoundException;
-import com.tw.merchant.AppConfig;
-import com.tw.merchant.dao.MaterialDao;
+import com.tw.merchant.StringUtils;
 
 /**
  * <b>Sentence</b> representation for material credit query sentence. <br>
@@ -19,8 +18,12 @@ import com.tw.merchant.dao.MaterialDao;
  */
 public class MaterialCreditsQuerySentence extends Sentence {
 
-	private QuantifiedNoun materialNoun;
+	private String materialNoun;
 
+	public MaterialCreditsQuerySentence(String materialNoun) {
+		this.materialNoun = materialNoun.trim();
+	}
+	
 	@Override
 	public Command getCommand() {
 		return new MaterialCreditsQueryExecutorCommand();
@@ -31,36 +34,30 @@ public class MaterialCreditsQuerySentence extends Sentence {
 		return true;
 	}
 
-	public QuantifiedNoun getMaterialNoun() {
-		return materialNoun;
-	}
-
-	public void setMaterialNoun(QuantifiedNoun materialNoun) {
-		this.materialNoun = materialNoun;
-	}
-
 	private class MaterialCreditsQueryExecutorCommand implements Command {
 
 		@Override
-		public CommandResult execute() throws InvalidNumeralException {
+		public CommandResult execute() throws InvalidSyntaxException {
 			CommandResult result = new CommandResult();
 
 			String msg = Boolean.toString(false);
+			String materialName = StringUtils.extractLastWord(materialNoun);
+			String materialQuantifierStr = materialNoun.replace(
+					materialName, "").trim();
+			
+			UserDefinedQuantifier materialQuantifier = new UserDefinedQuantifier(
+					materialQuantifierStr);
+			
 			try {
-				Double quantity = materialNoun.getQuantifier().getValue();
-				MaterialDao materialDao = AppConfig.getInstance()
-						.getDaoFactory().getMaterialDao();
-				Double credits = materialDao.getCredits(materialNoun.getNoun()
-						.getSymbol(), quantity);
-
+				Double credits = Material.getCredits(materialName, materialQuantifier.getValue().intValue());
 				msg = materialNoun.toString() + " " + KeyWord.IS + " "
 						+ credits + " " + KeyWord.CREDITS;
-
 			} catch (MaterialNotFoundException e) {
-				throw new RuntimeException(
-						ErrorMessage.MATERIAL_NOT_FOUND_ERROR
-								.getMessage(materialNoun.getNoun().getSymbol()));
+				throw new InvalidSyntaxException(e);
+			} catch (InvalidNumeralException e) {
+				throw new InvalidSyntaxException(e);
 			}
+			
 			result.setResult(msg);
 			return result;
 		}
@@ -69,7 +66,7 @@ public class MaterialCreditsQuerySentence extends Sentence {
 
 	@Override
 	public String toString() {
-		return "credits of " + materialNoun.getSymbol();
+		return "credits of " + materialNoun;
 	}
 
 }

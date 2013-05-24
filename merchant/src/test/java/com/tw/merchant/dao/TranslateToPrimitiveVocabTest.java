@@ -16,13 +16,14 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import com.tw.merchant.InvalidNumeralException;
+import com.tw.merchant.vocab.RomanVocab;
 
 /**
  * @author vishalshu
  * 
  */
 @RunWith(Parameterized.class)
-public class TranslateToPrimitiveVocabTest extends AbstractTranslationDaoTest {
+public class TranslateToPrimitiveVocabTest extends AbstractUserDefinedVocabTest {
 
 	private String symbol;
 	private String expected;
@@ -43,11 +44,11 @@ public class TranslateToPrimitiveVocabTest extends AbstractTranslationDaoTest {
 
 	@Before
 	public void before() throws InvalidNumeralException {
-		translationDao.addTranslation("glob", primaryVocab.getOne());
-		translationDao.addTranslation("pork", primaryVocab.getFive());
-		translationDao.addTranslation("pish", primaryVocab.getTen());
-		translationDao.addTranslation("shig", primaryVocab.getFifty());
-		translationDao.addTranslation("zwig", primaryVocab.getHundred());
+		vocab.addTranslation("glob", RomanVocab.I.toString());
+		vocab.addTranslation("pork", RomanVocab.V.toString());
+		vocab.addTranslation("pish", RomanVocab.X.toString());
+		vocab.addTranslation("shig", RomanVocab.L.toString());
+		vocab.addTranslation("zwig", RomanVocab.C.toString());
 	}
 
 	@Test
@@ -55,15 +56,13 @@ public class TranslateToPrimitiveVocabTest extends AbstractTranslationDaoTest {
 		if (expected == null) {
 			Assume.assumeTrue(false);
 		}
-		String actual = translationDao.translate(symbol);
+		String actual = vocab.translate(symbol);
 		Assert.assertEquals(expected.toLowerCase(), actual);
 	}
 
 	@Test(expected = InvalidNumeralException.class)
 	public void getUnknownPrimitiveSymbol() throws InvalidNumeralException {
-		if (expected != null) {
-			Assume.assumeTrue(false);
-		}
-		translationDao.getPrimitiveSymbolTranslation(symbol);
+		Assume.assumeTrue(expected==null);
+		vocab.translate(symbol);
 	}
 }

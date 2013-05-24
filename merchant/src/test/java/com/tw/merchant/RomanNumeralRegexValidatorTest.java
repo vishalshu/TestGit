@@ -11,9 +11,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import com.tw.merchant.validator.PrimaryVocabRegexValidator;
-import com.tw.merchant.validator.PrimaryVocabValidator;
-import com.tw.merchant.vocab.RomanVocab;
+import com.tw.merchant.vocab.PrimaryVocabValidator;
+import com.tw.merchant.vocab.RomanNumeralValidator;
 
 /**
  * @author vishalshu
@@ -88,7 +87,7 @@ public class RomanNumeralRegexValidatorTest {
 
 	@Before
 	public void setup() {
-		validator = new PrimaryVocabRegexValidator(new RomanVocab());
+		validator = new RomanNumeralValidator();
 	}
 
 	@Test

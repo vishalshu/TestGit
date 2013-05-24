@@ -20,5 +20,5 @@ public interface Command {
 	 * @return the result containing output message
 	 * @throws InvalidNumeralException
 	 */
-	CommandResult execute() throws InvalidNumeralException;
+	CommandResult execute() throws InvalidSyntaxException;
 }
