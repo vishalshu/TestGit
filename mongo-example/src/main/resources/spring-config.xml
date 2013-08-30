@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd 
+		http://www.springframework.org/schema/data/mongo
+          http://www.springframework.org/schema/data/mongo/spring-mongo-1.2.xsd">
+	<mongo:mongo host="127.0.0.1" port="27017" />
+	<mongo:db-factory id="mongoDbFactory" dbname="ecom"
+		write-concern="SAFE" />
+
+	<!-- <mongo:mapping-converter base-package="my.example.mongo.ecom.repository">
+		<mongo:custom-converters>
+			<mongo:converter ref="categoryConverter" />
+		</mongo:custom-converters>
+	</mongo:mapping-converter> -->
+<!-- 	<bean id="categoryConverter" class="my.example.mongo.ecom.repository.MongoCategoryReader"
+		lazy-init="true" autowire="byType">
+	</bean> -->
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"
+		lazy-init="false">
+		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+	</bean>
+
+
+	<mongo:repositories base-package="my.example.mongo.*.repository" />
+
+	<context:annotation-config></context:annotation-config>
+</beans>
