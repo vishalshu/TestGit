@@ -15,10 +15,11 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * @author vishalshu
  * 
  */
-public interface IUserRepository extends
+public interface IUserRepository extends CustomUserRepository,
 		PagingAndSortingRepository<MongoUser, String> {
 	List<MongoUser> findByAgeBetween(Integer from, Integer to, Pageable pageable);
 
 	@Query("{'username':{$regex:'\\^?0\\'}}")
 	List<MongoUser> findByUsernamePrefix(String prefix);
+
 }

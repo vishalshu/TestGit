@@ -9,12 +9,9 @@ import my.example.mongo.ecom.model.util.UserBuilder;
 import my.example.mongo.ecom.repository.IUserRepository;
 
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -32,11 +29,11 @@ public class UserRepositoryTest {
 	@Autowired
 	IUserRepository repository;
 
-	
 	@Test
 	public void insertUser() {
 		MongoUser user = UserBuilder.aNew().build();
 		IUser savedUser = repository.save(user);
+		repository.upsert();
 		Assert.assertNotNull(savedUser);
 		Assert.assertNotNull(savedUser.getId());
 	}
