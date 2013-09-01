@@ -6,6 +6,7 @@ package my.example.mongo.ecom.repository.test;
 import my.example.mongo.ecom.model.impl.MongoCategory;
 import my.example.mongo.ecom.model.impl.MongoProduct;
 import my.example.mongo.ecom.model.util.ProductBuilder;
+import my.example.mongo.ecom.repository.ICategoryRepository;
 import my.example.mongo.ecom.repository.IProductRepository;
 
 import org.junit.Assert;
@@ -28,11 +29,17 @@ public class ProductRepositoryTest {
 	@Autowired
 	IProductRepository productRepository;
 
+	@Autowired
+	ICategoryRepository categoryRepository;
+
 	@Test
 	public void insertProductTest() {
-
+		MongoCategory category = categoryRepository
+				.findOne("5221e8ec52f2df998109611b");
+		Assert.assertNotNull(category);
+		category.setName("changedCategoryName2");
 		MongoProduct product = productRepository.save(ProductBuilder.aNew()
-				.build());
+				.withMainCategory(category).build());
 		Assert.assertNotNull(product);
 		Assert.assertNotNull(product.getId());
 	}

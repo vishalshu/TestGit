@@ -17,6 +17,8 @@ public interface IOrder {
 
 	List<IOrderLineitem> getLineitems();
 
+	void addLineitem(IOrderLineitem lineitem);
+
 	IAddress getShippingAddress();
 
 	Long getSubtotal();

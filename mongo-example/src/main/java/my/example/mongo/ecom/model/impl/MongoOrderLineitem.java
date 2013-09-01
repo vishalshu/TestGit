@@ -21,6 +21,21 @@ public class MongoOrderLineitem implements IOrderLineitem {
 	private Double quantity;
 	private IPrice price;
 
+	public MongoOrderLineitem() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	public MongoOrderLineitem(String name, Double quantity, IPrice price) {
+		super();
+		this.name = name;
+		this.quantity = quantity;
+		this.price = price;
+	}
+
+
+
 	public String getId() {
 		return id;
 	}

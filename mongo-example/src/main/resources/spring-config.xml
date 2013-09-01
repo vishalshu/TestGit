@@ -10,20 +10,17 @@
 	<mongo:db-factory id="mongoDbFactory" dbname="ecom"
 		write-concern="SAFE" />
 
-	<!-- <mongo:mapping-converter base-package="my.example.mongo.ecom.repository">
-		<mongo:custom-converters>
-			<mongo:converter ref="categoryConverter" />
-		</mongo:custom-converters>
-	</mongo:mapping-converter> -->
-<!-- 	<bean id="categoryConverter" class="my.example.mongo.ecom.repository.MongoCategoryReader"
-		lazy-init="true" autowire="byType">
-	</bean> -->
+	<!-- <mongo:mapping-converter base-package="my.example.mongo.ecom.repository"> 
+		<mongo:custom-converters> <mongo:converter ref="categoryConverter" /> </mongo:custom-converters> 
+		</mongo:mapping-converter> -->
+	<!-- <bean id="categoryConverter" class="my.example.mongo.ecom.repository.MongoCategoryReader" 
+		lazy-init="true" autowire="byType"> </bean> -->
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"
 		lazy-init="false">
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
 
-
+	<bean class="my.example.mongo.ext.CascadingMongoEventListener" />
 	<mongo:repositories base-package="my.example.mongo.*.repository" />
 
 	<context:annotation-config></context:annotation-config>

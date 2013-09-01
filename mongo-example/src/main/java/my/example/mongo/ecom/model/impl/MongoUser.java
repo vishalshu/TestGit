@@ -22,10 +22,19 @@ public class MongoUser implements IUser {
 	@Indexed(unique = true)
 	private String username;
 	private String password;
+	private Integer age;
 	private IAddress address;
 
 	public String getId() {
 		return id;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public void setId(String id) {

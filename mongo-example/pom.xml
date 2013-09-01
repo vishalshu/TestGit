@@ -7,7 +7,7 @@
 	<name>ecommerce-example</name>
 	<description>Ecommerce Example</description>
 
-	<build>
+	<!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
@@ -26,7 +26,7 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.data</groupId>

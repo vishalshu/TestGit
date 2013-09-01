@@ -20,6 +20,7 @@ public class UserBuilder {
 	private UserBuilder() {
 		user.setUsername(UUID.randomUUID().toString());
 		user.setPassword("password");
+		user.setAge(25);
 		user.setAddress(addressBuilder.build());
 	}
 
@@ -29,6 +30,11 @@ public class UserBuilder {
 
 	public UserBuilder withAddress(MongoAddress address) {
 		user.setAddress(address);
+		return this;
+	}
+
+	public UserBuilder withAge(Integer age) {
+		user.setAge(age);
 		return this;
 	}
 

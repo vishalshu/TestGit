@@ -7,6 +7,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import my.example.mongo.ecom.model.ICategory;
+import my.example.mongo.ext.CascadeSave;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -24,6 +25,7 @@ public class MongoCategory implements ICategory {
 	private String name;
 	private String description;
 	@DBRef
+	@CascadeSave
 	private MongoCategory parentCategory;
 	@Transient
 	private transient Set<ICategory> childCategories = new LinkedHashSet<ICategory>();
@@ -34,9 +36,7 @@ public class MongoCategory implements ICategory {
 	public MongoCategory() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
+
 	/**
 	 * @param id
 	 * @param name
@@ -46,8 +46,6 @@ public class MongoCategory implements ICategory {
 		this.id = id;
 		this.name = name;
 	}
-
-
 
 	public String getId() {
 		return id;
@@ -120,7 +118,5 @@ public class MongoCategory implements ICategory {
 			return false;
 		return true;
 	}
-	
-	
 
 }

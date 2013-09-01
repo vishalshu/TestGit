@@ -13,6 +13,7 @@ import my.example.mongo.ecom.model.ICategory;
 import my.example.mongo.ecom.model.IHistoricalPrice;
 import my.example.mongo.ecom.model.IPrice;
 import my.example.mongo.ecom.model.IProduct;
+import my.example.mongo.ext.CascadeSave;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -35,8 +36,10 @@ public class MongoProduct implements IProduct {
 	private String sku;
 	private Map<String, String> details = new HashMap<String, String>();
 	@DBRef
+	//@CascadeSave
 	private Set<ICategory> categories = new LinkedHashSet<ICategory>();
 	@DBRef
+	@CascadeSave
 	private ICategory mainCategory;
 	private Set<String> tags = new HashSet<String>();
 	private Integer totalReviews;
@@ -151,8 +154,8 @@ public class MongoProduct implements IProduct {
 	public boolean addTag(String tag) {
 		return tags.add(tag);
 	}
-	
-	public void addDetail(String key, String value){
+
+	public void addDetail(String key, String value) {
 		details.put(key, value);
 	}
 

@@ -5,6 +5,7 @@ package my.example.mongo.ecom.model.util;
 
 import java.util.UUID;
 
+import my.example.mongo.ecom.model.ICategory;
 import my.example.mongo.ecom.model.impl.MongoPrice;
 import my.example.mongo.ecom.model.impl.MongoProduct;
 
@@ -28,6 +29,7 @@ public class ProductBuilder {
 		product.addTag("dummy");
 		product.addDetail("color", "black");
 		product.setTotalReviews(0);
+		product.setMainCategory(CategoryBuilder.aNew().build());
 	}
 
 	public static ProductBuilder aNew() {
@@ -36,6 +38,11 @@ public class ProductBuilder {
 
 	public static ProductBuilder aNew(String slug) {
 		return new ProductBuilder().withSlug(slug);
+	}
+
+	public ProductBuilder withMainCategory(ICategory category) {
+		product.setMainCategory(category);
+		return this;
 	}
 
 	public MongoProduct build() {

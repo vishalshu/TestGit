@@ -19,7 +19,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * @author vishalshu
  * 
  */
-@Document(collection="orders")
+@Document(collection = "orders")
 public class MongoOrder implements IOrder {
 	@Id
 	private String id;
@@ -27,7 +27,14 @@ public class MongoOrder implements IOrder {
 	private IUser user;
 	private List<IOrderLineitem> lineitems = new ArrayList<IOrderLineitem>();
 	private IAddress shippingAddress;
-	private Long subtotal;
+	private Long subtotal = 0l;
+
+	public MongoOrder() {
+	}
+
+	public MongoOrder(IUser user) {
+		shippingAddress = user.getAddress();
+	}
 
 	public String getId() {
 		return id;
@@ -50,7 +57,9 @@ public class MongoOrder implements IOrder {
 	}
 
 	public void setLineitems(List<IOrderLineitem> lineitems) {
-		this.lineitems = lineitems;
+		for (IOrderLineitem lineitem : lineitems) {
+			addLineitem(lineitem);
+		}
 	}
 
 	public IAddress getShippingAddress() {
@@ -65,8 +74,10 @@ public class MongoOrder implements IOrder {
 		return subtotal;
 	}
 
-	public void setSubtotal(Long subtotal) {
-		this.subtotal = subtotal;
+	@Override
+	public void addLineitem(IOrderLineitem lineitem) {
+		lineitems.add(lineitem);
+		subtotal += lineitem.getPrice().getSalePrice();
 	}
 
 }
