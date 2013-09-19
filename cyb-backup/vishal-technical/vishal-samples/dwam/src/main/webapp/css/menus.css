@@ -1,0 +1,135 @@
+ul.nice-menu-down li { list-style-image: none; }
+ul.nice-menu-down li a,
+ul.nice-menu-down li a.active { color:#f2f2f2; }
+ul.nice-menu-down a:hover { background-color: #333; }
+
+.nice-menu-down a:hover { text-decoration: none; color: #0CC3F4; }
+.nice-menu-down li.active-trail a,
+.nice-menu-down li.active-trail li.active-trail a,
+.nice-menu-down li.active-trail li.active-trail li.active-trail a,
+.nice-menu-down li.active-trail a.active,
+.nice-menu-down li.active-trail li.active-trail li a:hover,
+.nice-menu-down li.active-trail li a:hover { color: #0CC3F4; }
+
+.nice-menu-down li.active-trail li.active-trail li a,
+.nice-menu-down li.active-trail li a { color: #f2f2f2; }
+
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.nice-menu li {
+  float: left;
+  background-color: #000;
+  /* Additional overrides to deal with Garland theme. */
+  margin: 0;
+  padding-left: 0;
+  background-image: none;
+}
+
+/* Overrides for Garland header. */
+#header-region ul.nice-menu li {
+  margin: 0;
+  /* Padding rules are needed to deal with Garland's header line-height. */
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  background: #000;
+}
+
+ul.nice-menu a {
+  padding: 0.3em 5px 0.3em 5px;
+}
+
+ul.nice-menu ul,
+/* Repeat for Garland header. */
+#header-region ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px;
+  margin-right: 0;
+}
+
+/* Override for Garland header. */
+#header-region ul.nice-menu ul {
+  top: 1.7em;
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+}
+/******************************
+ VERTICAL (left/right) menus
+******************************/
+
+/* This is the default width of all vertical menus. */
+ul.nice-menu-right, ul.nice-menu-left,
+ul.nice-menu-right li, ul.nice-menu-left li {
+  width: 12.5em;
+}
+
+/* VERTICAL menus where submenus pop RIGHT (default). */
+ul.nice-menu-right ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+ul.nice-menu-right ul ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+
+/* VERTICAL menus where submenus pop LEFT. */
+ul.nice-menu-left li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+ul.nice-menu-left li ul li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+
+ul.nice-menu-left a, ul.nice-menu-left ul a {
+  padding-left: 14px;
+}
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left;
+  border: 0;
+}
+
+ul.nice-menu-down ul {
+  left: 0;
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul,
+/* Repeat for Garland header. */
+#header-region ul.nice-menu-down li ul li ul {
+  left: 12.5em;
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 15px;
+}

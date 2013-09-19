@@ -1,0 +1,628 @@
+/****************************************************
+/* If you would like the font-family of an element to be Museo-Slab
+/* then you need to edit the scripts/script.js file. Look for line 2875
+/* and follow the code already in place.
+/* If you have any questions email me at:
+/* jasonrsavino@gmail.com
+/***************************************************/
+#site-header {
+	height: 126px;
+}
+
+#header-first {
+	height: 100px;
+}
+
+#nice-menu-1 a {
+	font-size: 14px;
+}
+
+#bcrumb {
+	height: 20px;
+	color: #666;
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	padding-top: 5px;
+}
+
+.breadcrumb a {
+	color: #666;
+}
+
+#second-container {
+	background-image: url(../images/bg-header-01.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-color: #000;
+	height: 292px;
+	overflow: hidden;
+}
+
+#page-header {
+	height: 292px;
+}
+
+#page-header h2 {
+	color: #fff;
+}
+
+#page-header h3 {
+	color: #fff;
+}
+
+#third-container {
+	min-height: 400px;
+	background: transparent url(../images/bg-body-01.png) no-repeat scroll
+		center top;
+}
+
+#shape {
+	background: transparent url(../images/bg-footer-shape-blk.png) no-repeat
+		scroll center bottom;
+}
+
+#main-wrapper h1 {
+	color: #fff;
+	border-bottom: 1px solid #888;
+}
+
+#main-wrapper h2 {
+	color: #fff;
+}
+
+#fourth-container {
+	border-top: 1px solid #888;
+}
+
+#footer-message {
+	color: #f2f2f2;
+	padding-top: 15px;
+}
+
+a {
+	color: #0cc3f4;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.blue {
+	color: #0cc3f4;
+}
+
+thead {
+	background-color: #666;
+	color: #fff;
+}
+
+td.divx-plus-lets-you {
+	background-color: #888888;
+	color: #fff;
+}
+
+td.divx-plus-lets-you .divx-plus-table-subheader {
+	text-transform: uppercase;
+}
+
+.clear-block {
+	display: block;
+}
+
+/********************************************
+/* Download Button
+/*******************************************/
+.divx-plus-button-download-fix {
+	margin-left: 15px;
+	height: 35px;
+}
+
+.divx-plus-button-download-fix .btn_download {
+	background: transparent url(../images/btn-download-right.png) no-repeat
+		scroll right top;
+	float: left;
+	height: 35px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.divx-plus-button-download-fix .btn_download a {
+	background: transparent url(../images/btn-download-left.png) no-repeat
+		scroll left top;
+	color: #FFFFFF;
+	display: block;
+	font-size: 16px;
+	margin-left: -10px;
+	padding: 5px 35px 10px 10px;
+}
+
+.divx-plus-button-download-fix .divx-plus-publishers {
+	clear: both;
+	height: 25px;
+	width: 160px;
+	margin-left: -10px;
+}
+
+.divx-plus-button-download-fix .btn_playback {
+	background: transparent url(../images/btn-buy-now-right.png) no-repeat
+		scroll right top;
+	float: left;
+	height: 35px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.divx-plus-button-download-fix .btn_playback a {
+	background: transparent url(../images/btn-buy-now-left.png) no-repeat
+		scroll left top;
+	color: #FFFFFF;
+	display: block;
+	font-size: 16px;
+	margin-left: -10px;
+	padding: 5px 35px 10px 10px;
+}
+
+/********************************************
+/* Custom Form Elements
+/*******************************************/
+.checkbox,.radio {
+	width: 19px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	background: url(../images/checkbox.gif) no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+.radio {
+	background: url(../images/radio.gif) no-repeat;
+}
+
+.select {
+	position: absolute;
+	width: 120px;
+	/* With the padding included, the width is 190 pixels: the actual width of the image. */
+	height: 21px;
+	padding: 0 24px 0 8px;
+	color: #fff;
+	font: 12px/21px arial, sans-serif;
+	background: url(../images/select.png) no-repeat;
+	overflow: hidden;
+}
+
+select {
+	color: #fff;
+	background-color: #525252;
+	border: 1px inset #5a5a5a;
+	font-weight: bold;
+}
+
+input[type="password"] {
+	background-color: #ffffff;
+	border: 0;
+	color: #000000;
+	padding: 6px;
+	font-size: 14px;
+}
+
+input[type="text"] {
+	background-color: #ffffff;
+	border: 0;
+	color: #000000;
+	padding: 6px;
+	font-size: 14px;
+}
+
+input[type="email"] {
+	background-color: #ffffff;
+	border: 0;
+	color: #000000;
+	padding: 6px;
+	font-size: 14px;
+}
+input:focus{
+	color: black !important ;
+}
+option:hover {
+	background-color: red;
+}
+
+.form-text {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #6e6e6e;
+	border-top: 3px inset #6e6e6e;
+	border-right: 3px inset #6b6b6b border-bottom: 	3px inset #6b6b6b;
+	border-left: 3px inset #6e6e6e;
+	background-color: #525252; //
+	color: #ffffff;
+}
+
+/***********************************
+/*UI tabs
+/***********************************/
+.ui-tabs-nav { /*resets*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+	float: left;
+	position: relative;
+	z-index: 1;
+	bottom: -1px;
+	border-bottom: 1px solid #0cc3f4;
+	margin: 0 0 10px;
+	width: 100%;
+}
+
+.ui-tabs-nav ul { /*resets*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+
+.ui-tabs-nav li { /*resets*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+	float: left;
+}
+
+.ui-tabs-nav li a { /*resets*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+	float: left;
+	text-decoration: none;
+	padding: .5em 40px .5em 1em;
+	color: #ccc;
+	background: url(../images/tabs.png) no-repeat right -31px;
+}
+
+.ui-tabs-nav li a:hover {
+	background: url(../images/tabs.png) no-repeat right 0px;
+	color: #fff;
+}
+
+.ui-tabs-nav li.ui-tabs-selected {
+	
+}
+
+.ui-tabs-nav li.ui-tabs-selected a,.ui-tabs-nav li.ui-tabs-selected a:hover
+	{
+	background: url(../images/tabs.png) no-repeat right 0px;
+	color: #fff;
+}
+
+.ui-tabs-panel { /*resets*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+	clear: left;
+	padding: 0;
+}
+
+.ui-tabs-hide {
+	display: none;
+	/* for accessible hiding: position: absolute; left: -99999999px*/;
+}
+
+/*****************************
+/* Block Edit Overrides
+/****************************/
+div.block-edit-link a,div.node-edit-link a,div.view div.views-admin-links-hover a,div.view div.views-admin-links:hover a
+	{
+	color: #fff;
+}
+
+div.node-edit-link ul.links li a:hover,div.node-edit-link ul.links li a:active,div.block-edit-link ul.links li a:hover,div.block-edit-link ul.links li a:active,div.view div.views-admin-links a:hover,div.view div.views-admin-links a:active
+	{
+	color: #0cc3f4;
+}
+
+#blocks td.region {
+	font-weight: bold;
+	font-size: 1.5em;
+	background-color: #ccc;
+}
+
+/*****************************
+/* Language Drop-down Block
+/****************************/
+#block-lang_dropdown-0 {
+	height: 45px;
+	position: relative;
+	float: right;
+	display: inline;
+	top: 12px;
+}
+
+/*****************************
+/* Seach Box Block
+/****************************/
+#block-search-0 {
+	display: inline;
+	float: right;
+	height: 45px;
+	left: 15px;
+	position: relative;
+	top: 5px;
+	width: 180px;
+}
+
+/****************************
+/* Download Button
+/****************************/
+#block-block-103 {
+	margin-top: 3px;
+}
+
+/********************************************
+/* Newsletter Form 
+/********************************************/
+#block-divx_newsletter-0 .signup-subtitle {
+	font-size: 14px;
+	margin: 1em 0 0.5em;
+	color: #ffffff;
+}
+
+#block-divx_newsletter-0 #edit-emailaddress-wrapper {
+	float: left;
+	width: 230px;
+}
+
+#block-divx_newsletter-0 #edit-submit-1 {
+	display: inline;
+	margin: 0;
+}
+
+#block-divx_newsletter-0 .privacy-link {
+	clear: both;
+}
+
+#block-divx_newsletter-0 #edit-emailaddress {
+	height: 18px;
+	width: 220px;
+}
+
+/****************************/
+.block-divx_text_links h2 {
+	background-color: #888;
+	padding: 8px;
+	color: #fff;
+}
+
+#edit-search-block-form-1-wrapper {
+	margin-bottom: 0;
+	margin-top: 0;
+	display: inline;
+}
+
+#edit-submit {
+	position: relative;
+	top: 6px;
+	left: -2px;
+}
+
+#edit-search-block-form-1 {
+	width: 146px;
+}
+
+#block-block-105 {
+	margin-top: 24px;
+}
+
+#block-block-105 p {
+	margin: 0;
+	line-height: 0;
+}
+
+#block-block-105 p img {
+	margin: 0;
+	padding: 0;
+}
+
+#footer-first .block-menu_block {
+	float: left;
+	height: 195px;
+}
+
+#footer-first .block-menu_block a {
+	color: #0cc3f4;
+}
+
+#footer-first h2 {
+	color: #fff;
+	font-size: 14px;
+}
+
+.block-menu_block ul,.block-menu_block ul li {
+	list-style: none;
+	padding: 0;
+	margin: 5px 0 0;
+}
+
+.block-nice_menus {
+	margin-top: 25px;
+}
+
+/*****************************
+/* Menu Blocks
+/****************************/
+#sidebar-first .block-menu_block .content {
+	margin-left: -14px;
+}
+
+#sidebar-first .block-menu_block ul li a {
+	font-size: 14px;
+	color: #000;
+	padding-left: 14px;
+}
+
+#sidebar-first .block-menu_block ul li ul li a {
+	font-size: 12px;
+	color: #474749;
+	padding-left: 29px;
+}
+
+#sidebar-first .block-menu_block ul li ul li ul li a {
+	font-size: 12px;
+	color: #474749;
+	padding-left: 39px;
+}
+
+#sidebar-first .block-menu_block ul li ul li ul li ul li a {
+	font-size: 12px;
+	color: #999;
+	padding-left: 49px;
+}
+
+#sidebar-first .block-menu_block h2 {
+	color: #0cc3f4;
+	border-bottom: 1px solid #0cc3f4;
+}
+
+#sidebar-first .block-menu_block .expanded ul {
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar-first .block-menu_block ul li ul li a {
+	background: url(../images/bg-left-nav.png) 21px top no-repeat;
+}
+
+#sidebar-first .block-menu_block ul li ul li ul li a {
+	background: url(../images/bg-left-nav.png) 31px top no-repeat;
+}
+
+#sidebar-first .block-menu_block ul li ul li ul li ul li a {
+	background: url(../images/bg-left-nav.png) 41px top no-repeat;
+}
+
+#sidebar-first .block-menu_block a.active {
+	background: none;
+}
+
+#sidebar-first .block-menu_block ul li a:hover,#sidebar-first .block-menu_block ul li ul li a:hover,#sidebar-first .block-menu_block ul li ul li ul li a:hover,#sidebar-first .block-menu_block ul li ul li ul li ul li a:hover
+	{
+	background: url(../images/icon-bullet.png) top left no-repeat;
+}
+
+#sidebar-first .block-menu_block ul li.active,#sidebar-first .block-menu_block ul li ul li.active,#sidebar-first .block-menu_block ul li ul li ul li.active,#sidebar-first .block-menu_block ul li ul li ul li ul li.active
+	{
+	background: url(../images/bg-left-nav-active.png) top left no-repeat;
+}
+
+/*********/
+/* Forms
+/*********/
+input#edit-emailaddress,input#edit-emailaddress-1 {
+	width: 300px;
+}
+
+/*********/
+/* Forms
+/*********/
+.error {
+	color: red;
+	line-height: 2.0em;
+	margin-top: 1.125em;
+	margin-bottom: 0.375em;
+}
+
+.hasPlaceholder {
+	color: #aaa;
+}
+
+#loadingWidget {
+	position: absolute;
+	left: 50%;
+	top: 42%;
+	display: none;
+	background: #000000;
+	padding: 5px 5px 5px 5px;
+	margin: 0px 0px 0px 0px;
+}
+
+/* Hide the invalid box while the input has focus */
+.ng-invalid:focus+.error {
+	display: none;
+}
+
+.ng-dirty.ng-valid+.error {
+	display: none;
+}
+
+.gridStyle {
+	border: 1px solid rgb(212, 212, 212);
+	width: 500px;
+	height: 243px;
+	margin-top: 15px;
+}
+
+th, td {
+    line-height: 1.5em;
+    padding: 4px 10px 4px 5px;
+    vertical-align: top;
+}
+
+th{
+	background-color: inherit;
+    border-left: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+    bottom: 0;
+    top: 0;
+	
+    color: #FFFFFF;
+    background-color:black;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cellText {
+	
+	border-left: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+	
+    -moz-box-sizing: border-box;
+    color: #000000;
+    overflow: hidden;
+    
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.selectedRow{
+	background-color: #C9DDE1;
+}
+
+}

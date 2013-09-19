@@ -1,0 +1,11 @@
+/****************************************************
+/* Stylesheet containing custom styles for tablet devices
+
+/***************************************************/
+
+@media(max-width:979px){
+	.nav-collapse .nav {
+		margin: 10px 0px 10px 0px !important;
+	}
+}
+

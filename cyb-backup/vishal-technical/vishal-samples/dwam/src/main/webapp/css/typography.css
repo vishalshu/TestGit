@@ -1,0 +1,120 @@
+/* $Id:$ */ 
+
+/* --------------------------------------------------------------  
+ *   	Sets up some default typography   
+-------------------------------------------------------------- */
+
+/* Default font settings. 
+-------------------------------------------------------------- */
+@font-face
+{
+font-family: LubalinFont;
+src: url("../fonts/Lubalin/LubalinGraphStd-Book.otf"),
+     url("../fonts/Lubalin/LubalinGraphStd-Demi.otf"); 
+}
+/*
+points = pixels * 72 / 96
+pixels = pt / 72 * 96
+base font-size = 14px
+base line-height = 18px
+
+8pt 	11px
+9pt 	12px
+10pt 	13px
+11pt 	15px
+12pt 	16px
+14pt 	19px
+18pt 	24px
+20pt 	26px
+*/
+body { 
+	font-size: 87.5%; /* (0.75 * 16px = 12px) */
+	line-height: 1.285em;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+ }
+ html>body {
+ 	font-size: 14px;
+ }
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1 {	font-size: 1.857em;	line-height: 0.692em;	margin-top: 0.692em;	margin-bottom: 0.692em;}
+h2 {	font-size: 1.714em;	line-height: 0.75em;	margin-top: 1.125em;	margin-bottom: 0.375em;}
+h3 {	font-size: 1.357em;	line-height: 0.947em;	margin-top: 1.687em;	margin-bottom: 0.562em;}
+h4 {	font-size: 1.142em;	line-height: 1.125em;	margin-top: 0.562em;	margin-bottom: 0.562em;}
+h5 {	font-size: 1.071em;	line-height: 1.2em;	margin-top: 0.6em;	margin-bottom: 0.6em; }
+h5 {	font-size: 1.071em;	line-height: 1.2em; }
+
+h1, h2, h3, h4, h5, h6 { font-family: LubalinFont, Helvetica, Helvetica Neue;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p           { margin: 1em 0; font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;}
+p img       { float: left; margin: 0; padding: 0; }
+p img.right { float: right; margin: 0; }
+
+a:focus, 
+a:hover     { text-decoration: underline;}
+a           { text-decoration: none; }
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr, 
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre,code    { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; } 
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul, 
+li ol        { margin:0 1.5em; }
+ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+li            {line-height: 1.25em; margin: 0.25em 0 0 0;}
+ul           { list-style-type: disc; }
+ol           { list-style-type: decimal; }
+dl           { margin: 0 0 1.5em 0; }
+dd          { margin-left: 1em; margin-bottom: 1.5em; line-height: 1.25em; }
+ol           { list-style: decimal; }
+ul 						{ list-style: square; }
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table        { margin-bottom: 1.4em; width:100%; }
+thead th   { border:none;}
+th             { font-weight: bold; }
+th,td         { padding: 4px 10px 4px 5px; line-height: 1.5em; vertical-align: top; }
+tfoot         { font-style: italic; }
+caption     { background: #eee; }
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide       { display: none; }
+
+.quiet      { color: #666; }
+.loud       { color: #000; }
+.highlight  { background:#ff0; }
+.added      { background:#060; color: #fff; }
+.removed    { background:#900; color: #fff; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }

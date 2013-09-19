@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.rovi.dwam.service" />
+	
+
+	<context:property-placeholder location="classpath:ws.properties"/>
+	<context:property-placeholder location="classpath:dwam.properties"/>
+
+	<bean id="jacksonObjectMapper" class="com.rovi.dwam.util.DwamObjectMapper" />
+
+	<bean id="dwamRESTClient" class="com.rovi.dwam.commons.DwamRESTClient" scope="singleton" init-method="enableSSL"/>
+
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<constructor-arg ref="httpClientFactory" />
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+				<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" >
+					<property name="objectMapper" ref="jacksonObjectMapper" />
+				</bean>
+			</list>
+		</property>
+		<property name="errorHandler" ref="customErrorHandler" />
+	</bean>
+	
+	<bean id="customErrorHandler" class="com.rovi.dwam.ws.CustomResponseErrorHandler" />
+	
+	<bean id="httpClientParams" class="org.apache.commons.httpclient.params.HttpClientParams">
+		<property name="authenticationPreemptive" value="true" />
+		<property name="connectionManagerClass"
+			value="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager" />
+	</bean>
+
+	<bean id="httpClient" class="org.apache.http.impl.client.DefaultHttpClient">
+		<!-- <constructor-arg ref="httpClientParams" /> -->
+		<constructor-arg>
+            <bean class="org.apache.http.impl.conn.PoolingClientConnectionManager"/>
+        </constructor-arg>
+	</bean>
+
+	<bean id="httpClientFactory"
+		class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory">
+		<constructor-arg ref="httpClient" />
+	</bean>
+	
+	<bean id="webServiceResource" class="com.rovi.dwam.ws.WebServiceResource" scope="singleton">
+		<property name="webServiceConfig" value="classpath:ws.properties" />
+		<property name="dwamConfig" value="classpath:dwam.properties" />
+		<property name="dwamCertificate" value="classpath:security/dwamlab11.cer" />
+	</bean>
+	
+	<bean id="userService" class="com.rovi.dwam.service.UserServiceImpl">
+	
+	</bean>
+	
+	<bean id="deviceService" class="com.rovi.dwam.service.DeviceServiceImpl">
+	
+	</bean>
+	
+</beans>

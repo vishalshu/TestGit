@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd   http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<!-- This application context is created for creating and injecting sample 
+		data or dependent test beans into other test beans -->
+
+	<context:annotation-config />
+
+	<bean id="accountRequest" class="com.rovi.dwam.model.AccountRequest">
+		<property name="email" value="dakbhavesh@gmail.com"/>
+		<property name="firstName" value="utsavj"/>
+		<property name="lastName" value="jimuliya"/>
+		<property name="password" value="test123"/>
+	</bean>
+	
+	<bean id="dummyUpdateAccountRequest" class="com.rovi.dwam.model.UpdateAccountRequest" parent="accountRequest">
+		<property name="email" value="jimuliyautsav@gmail.com"/>
+		<property name="firstName" value="First Name#{ T(System).currentTimeMillis() }"/>
+	</bean>
+	
+	<bean id="invalidAccountRequest" class="com.rovi.dwam.model.AccountRequest" parent="accountRequest">
+		<property name="email" value="invalidemail"/>
+	</bean>
+	
+	<bean id="registerNewDevice" class="com.rovi.dwam.model.RegisterCeDeviceRequest">
+		<property name="regCode" value="5EKSNCWMC8"></property>
+		<property name="newDeviceName" value="Cybage 3"></property>
+	</bean>
+	
+	<bean id="deRegisterDevice" class="com.rovi.dwam.model.DeregisterCeDeviceRequest">
+		<property name="deviceId" value="2499112"></property>
+		<property name="deregCode" value="IEB5T3WR"></property>
+	</bean>
+	
+	
+
+</beans>

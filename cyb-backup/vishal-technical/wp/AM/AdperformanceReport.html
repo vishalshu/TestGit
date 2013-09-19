@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ad Performance Report</title>
+<link href="css/amCss.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="script/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="script/jquery.datepick.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#popupDatepicker').datepick();
+	$('#popupDatepicker2').datepick();
+});
+
+function showDate(date) {
+	alert('The date chosen is ' + date);
+}
+</script>
+<script>
+
+sfHover = function() {
+	var sfEls = document.getElementById("navbar").getElementsByTagName("li");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" hover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" hover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
+<link href="css/navtop.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="AMtopstrip">
+	<div class="nav">
+    <ul id="menu">
+      <li id="clientList"><a class="drop" href="#">Select Client</a><!-- Begin Home Item -->
+        
+        <div class="dropdown_2columns">
+          <div class="col_1">
+            <ul class="menuTopBox">
+              <li> <a href="#">ABC Company Inc</a> </li>
+              <li> <a href="#">XYZ Interactive Sys</a> </li>
+              <li> <a href="#">CMDF Systems Inc</a> </li>
+              <li> <a href="#">Example Comany Name</a> </li>
+              <li> <a href="#">ABC Company Inc</a> </li>
+              <li> <a href="#">XYZ Interactive Sys</a> </li>
+              <li> <a href="#">CMDF Systems Inc</a> </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="logo"><img src="images/Logo_Wpromote.png" width="134" height="43" /></div>
+</div>
+
+<div id="wrapper">
+  <h1>Ad Performance Report</h1>
+  <div id="bredcrumbs"> Home > Ad performance Report</div>
+  <div id="DateParaBox">
+    <div id="formHead">Report Parameter</div>
+    <br id="clear" />
+    <div style="width:auto;">
+      <form>
+        <div id="searchBox1"> 
+        <table  class="mytab" width="100%" border="1">
+  <tr>
+    <td nowrap="nowrap">Start Date:</td>
+    <td><input type="text" id="popupDatepicker"></td>
+    <td nowrap="nowrap">End Date:</td>
+    <td> <input type="text" id="popupDatepicker2"></td>
+    <td><input type="submit"  value="Generate Report" /></td>
+  </tr>
+</table>
+
+       
+        
+        
+      </form>
+    </div><br id="clear" />
+  </div>
+  <div id="mainDataContainer">
+    <div id="formHead" >Date Range: 2013-02-19 - 2013-02-26</div>
+    <div id="wrap">
+      <ul id="navbar">
+        <!-- The strange spacing herein prevents an IE6 whitespace bug. -->
+        <li class="drop"><a href="#">Export</a>
+          <ul>
+            <li><a href="#">CSV</a></li>
+            <li> <a href="#">PDF</a></li>
+            <li> <a href="#">XLS</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Printable Version</a> </li>
+        <li><a href="#">Email report</a> </li>
+      </ul>
+    </div>
+    <br id="clear" />
+    <div id="container">
+      <table summary="Submitted table designs">
+        <thead>
+          <tr>
+            <th rowspan="2" scope="col">Advertisement</th>
+            <th rowspan="2" scope="col">Impressions</th>
+            <th rowspan="2" scope="col">CTR</th>
+            <th colspan="2" scope="col">Spend</th>
+            <th colspan="2" scope="col">Conversions</th>
+            <th colspan="2" scope="col">Purchase</th>
+          </tr>
+          <tr>
+            <th scope="col">Total</th>
+            <th scope="col">CPC</th>
+            <th scope="col">Total</th>
+            <th scope="col">CPA</th>
+            <th scope="col">Total</th>
+            <th scope="col">ROI</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th scope="row">&nbsp;Total</th>
+            <td colspan="9"># rows</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr >
+            <th scope="row" class="odd"><a href="#">Google</a></th>
+            <td><a href="#">1,256314</a></td>
+            <td>$12,54687</td>
+            <td>$4,261.42</td>
+            <td>$0.77</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+          </tr>
+          <tr class="odd">
+            <th scope="row" ><a href="#">Bing</a></th>
+            <td><a href="#">1,256314</a></td>
+            <td>$12,54687</td>
+            <td>$4,261.42</td>
+            <td>$0.77</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+          </tr>
+          <tr>
+            <th scope="row" class="odd"><a href="#">Google</a></th>
+            <td><a href="#">1,256314</a></td>
+            <td>$12,54687</td>
+            <td>$4,261.42</td>
+            <td>$0.77</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+          </tr>
+          <tr class="odd">
+            <th scope="row" ><a href="#">Bing</a></th>
+            <td><a href="#">1,256314</a></td>
+            <td>$12,54687</td>
+            <td>$4,261.42</td>
+            <td>$0.77</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+          </tr>
+          <tr >
+            <th scope="row" class="odd"><a href="#">Google</a></th>
+            <td><a href="#">1,256314</a></td>
+            <td>$12,54687</td>
+            <td>$4,261.42</td>
+            <td>$0.77</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+          </tr>
+          <tr class="odd">
+            <th scope="row" ><a href="#">Bing</a></th>
+            <td><a href="#">1,256314</a></td>
+            <td>$12,54687</td>
+            <td>$4,261.42</td>
+            <td>$0.77</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+          </tr>
+          <tr >
+            <th scope="row" class="odd"><a href="#">Google</a></th>
+            <td><a href="#">1,256314</a></td>
+            <td>$12,54687</td>
+            <td>$4,261.42</td>
+            <td>$0.77</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+            <td>$12,54687</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+ 
+  <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+    <resetJUL>true</resetJUL>
+  </contextListener>
+  
+ <property resource="dwam.properties" />
+  
+ <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>${destination}</file>
+    <append>true</append>
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- <pattern>%.-1level|%-40.40logger{0}|%msg%n</pattern> -->
+      <pattern>%d %5p [%c:%L] - %m%n</pattern>
+    </encoder>
+  </appender>
+ 
+  <logger name="com.rovi.dwam" level="info" />
+  <logger name="org.springframework" level="error" />
+  <logger name="org.springframework.beans" level="error" />
+ 
+  <root level="info">
+      <appender-ref ref="FILE" />
+    <appender-ref ref="console" />
+  </root>
+</configuration>

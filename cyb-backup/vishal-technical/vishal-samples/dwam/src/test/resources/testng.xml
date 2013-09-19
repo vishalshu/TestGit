@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="DWAMTests" verbose="1">
+  <test name="Service">
+  	<classes>
+  		<class name="com.rovi.dwam.test.service.UserServiceTest" />
+  		<class name="com.rovi.dwam.test.service.UserRegistrationTest" />
+  		<class name="com.rovi.dwam.test.service.DeviceRegistrationTest" />
+  		
+  	</classes>
+  </test>
+</suite>

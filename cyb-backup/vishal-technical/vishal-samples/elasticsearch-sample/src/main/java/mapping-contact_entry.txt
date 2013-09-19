@@ -1,0 +1,22 @@
+{
+    "contact_entry" : {
+        "properties" : {
+        	"contactId" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+        	"subscriptionId": { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+        	"providerSymbolicName" : { "type" : "string", "store" : "yes", "index" : "not_analyzed"},
+        	"profileId" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+			"primaryEmail" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+            "givenName" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+			"familyName" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+			"nickname" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+            "honorificPrefix" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },
+			"honorificSuffix" : { "type" : "string", "store" : "yes", "index" : "not_analyzed" },    
+			"birthday" : {"type" : "date", "store" : "yes", "index" : "not_analyzed" },
+			"organization" : { "type" : "string", "store" : "yes", "index" : "analyzed" },
+			"url" : {"type" : "string", "store" : "yes", "index" : "not_analyzed" },
+			"lastAccessed" : {"type" : "date", "store" : "yes", "index" : "not_analyzed" },
+            "lastIndexed" : {"type" : "date", "store" : "yes", "index" : "not_analyzed" },							        
+            "thumbnailSmall" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"}            
+        }
+    }
+}
