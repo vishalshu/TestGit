@@ -1,6 +1,6 @@
 package my.example.mongo.ecom.repository.test;
 
-import my.example.mongo.ecom.model.IUser;
+
 import my.example.mongo.ecom.model.impl.MongoOrder;
 import my.example.mongo.ecom.model.impl.MongoUser;
 import my.example.mongo.ecom.model.util.OrderBuilder;
@@ -8,64 +8,64 @@ import my.example.mongo.ecom.model.util.OrderLineitemBuilder;
 import my.example.mongo.ecom.model.util.UserBuilder;
 import my.example.mongo.ecom.repository.IOrderRepository;
 import my.example.mongo.ecom.repository.IUserRepository;
-
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:/spring-config.xml")
-public class OrderRepositoryTest {
-	@Autowired
-	private IOrderRepository repository;
+import java.util.List;
 
-	@Autowired
-	private IUserRepository userRepository;
-	private  IUser user;
 
-	@Before
-	public  void setup() {
-		user = userRepository.save(UserBuilder.aNew().build());
-		Assert.assertNotNull(user);
-	}
+public class OrderRepositoryTest extends AbstractMongoSpringRepoTest {
+    @Autowired
+    private IOrderRepository repository;
 
-	@Test
-	public void insertOrdersTest() {
+    @Autowired
+    private IUserRepository userRepository;
 
-		MongoOrder order = repository.save(OrderBuilder.aNew(user).build());
+    private MongoUser user;
 
-		Assert.assertNotNull(order);
-		Assert.assertNotNull(order.getId());
-	}
+    private static final String USERNAME = "vishalshu"+System.currentTimeMillis();
 
-	@Test
-	public void insertOrderSubtotalTest() {
+    @BeforeClass
+    public void setup() {
+        user = userRepository.save(UserBuilder.aNew().withUsername(USERNAME).build());
+        Assert.assertNotNull(user);
+    }
 
-		MongoOrder order = repository.save(OrderBuilder
-				.aNew(user)
-				.withLineitem(
-						OrderLineitemBuilder.aNew().withPrice(100l).build(),
-						OrderLineitemBuilder.aNew().withPrice(200l).build(),
-						OrderLineitemBuilder.aNew().withPrice(300l).build())
-				.build());
+    @Test
+    public void insertOrdersTest() {
 
-		Assert.assertNotNull(order);
-		Assert.assertNotNull(order.getId());
-		Assert.assertEquals((Long)600l, order.getSubtotal());
-	}
+        MongoOrder order = repository.save(OrderBuilder.aNew(user).build());
 
-	@Test
-	public void readOrders() {
+        Assert.assertNotNull(order);
+        Assert.assertNotNull(order.getId());
+    }
 
-		Page<MongoOrder> orders = repository.findAll(new PageRequest(0, 10));
-		Assert.assertTrue(orders.isFirstPage());
-	}
+    @Test
+
+    public void insertOrderSubtotalTest() {
+
+        MongoOrder order = repository.save(OrderBuilder
+                .aNew(user)
+                .withLineitem(
+                        OrderLineitemBuilder.aNew().withPrice(100l).build(),
+                        OrderLineitemBuilder.aNew().withPrice(200l).build(),
+                        OrderLineitemBuilder.aNew().withPrice(300l).build())
+                .build());
+
+        Assert.assertNotNull(order);
+        Assert.assertNotNull(order.getId());
+        Assert.assertEquals((Long) 600l, order.getSubtotal());
+    }
+
+    @Test
+    public void readOrders() {
+        Page<MongoOrder> orders = repository.findAll(new PageRequest(0, 10));
+        Assert.assertTrue(orders.isFirstPage());
+    }
 
 }

@@ -1,72 +1,62 @@
 package my.example.mongo.ecom.repository.test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import my.example.mongo.ecom.model.IUser;
 import my.example.mongo.ecom.model.impl.MongoUser;
 import my.example.mongo.ecom.model.util.UserBuilder;
 import my.example.mongo.ecom.repository.IUserRepository;
-
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:/spring-config.xml")
-public class UserSearchTest {
+import java.util.List;
 
-	@Autowired
-	private static IUserRepository repository;
 
-	private static List<String> ids = new ArrayList<String>();
+public class UserSearchTest extends AbstractMongoSpringRepoTest {
 
-	@BeforeClass
-	public static void setup() {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext(
-				"/spring-config.xml");
-		repository = ctx.getBean(IUserRepository.class);
-		bulkInsertUsers();
-	}
+    @Autowired
+    private IUserRepository repository;
 
-	private static void bulkInsertUsers() {
-		String[] usernames = new String[]{"vishal","abc","xyz","klsf","klowe","akls","pwpl","laksd"};
-		for (int i = 0; i < 50; i++) {
-			MongoUser user = UserBuilder.aNew().withUsername(usernames[i%8]+System.currentTimeMillis()).withAge(i + 18).build();
-			IUser savedUser = repository.save(user);
-			ids.add(savedUser.getId());
-		}
-	}
+    String[] usernames = new String[]{"vishal", "abc", "xyz", "klsf",
+            "klowe", "akls", "pwpl", "laksd"};
+    IUser savedUser;
+    @BeforeClass
+    public void setup() {
 
-	@Test
-	public void testFindByAgeBetween() {
-		List<MongoUser> users = repository.findByAgeBetween(20, 40,
-				new PageRequest(0, 5, new Sort("username")));
-		Assert.assertNotNull(users);
-		Assert.assertTrue(!users.isEmpty());
-	}
-	
-	@Test
-	public void testFindUsersByUsernamePrefix() {
-		List<MongoUser> users = repository.findByUsernamePrefix("vishal");
-		Assert.assertNotNull(users);
-		Assert.assertTrue(!users.isEmpty());
-	}
+        for (int i = 0; i < 50; i++) {
+            MongoUser user = UserBuilder
+                    .aNew()
+                    .withUsername(usernames[i % 8] + System.currentTimeMillis())
+                    .withAge(i + 18).build();
+            savedUser = repository.save(user);
+        }
+    }
 
-	@AfterClass
-	public static void teardown() {
-		for (String id : ids) {
-			repository.delete(id);
-		}
-	}
+    @Test
+    public void testFindByAgeBetween() {
+        List<MongoUser> users = repository.findByAgeBetween(20, 40,
+                new PageRequest(0, 5, new Sort("username")));
+        Assert.assertNotNull(users);
+        Assert.assertTrue(!users.isEmpty());
+    }
+
+    @Test
+    public void testFindUsersByUsernamePrefix() {
+        List<MongoUser> users = repository.findByUsernameRegex("(?i)iSH(?-i)");
+        Assert.assertNotNull(users);
+        Assert.assertTrue(!users.isEmpty());
+    }
+
+    @Test
+    public void testFindByUsername() {
+        MongoUser user = repository.findByUsername(savedUser.getUsername());
+        Assert.assertNotNull(user);
+        Assert.assertEquals(user, savedUser);
+    }
 
 }

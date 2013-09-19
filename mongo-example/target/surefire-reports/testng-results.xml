@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="24" passed="22">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="1717" started-at="2013-09-05T13:57:39Z" finished-at="2013-09-05T13:57:41Z">
+    <groups>
+      <group name="authentication">
+        <method signature="UserServiceTest.testAuthenticateUser(java.lang.String, java.lang.String, boolean)[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="testAuthenticateUser" class="my.example.mongo.ecom.service.test.UserServiceTest"/>
+      </group> <!-- authentication -->
+    </groups>
+    <test name="Command line test" duration-ms="1717" started-at="2013-09-05T13:57:39Z" finished-at="2013-09-05T13:57:41Z">
+      <class name="my.example.mongo.ecom.repository.test.OrderRepositoryTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="25" started-at="2013-09-05T19:27:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="setup" is-config="true" duration-ms="2" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderRepositoryTest.insertOrderSubtotalTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="insertOrderSubtotalTest()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="insertOrderSubtotalTest" duration-ms="19" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertOrderSubtotalTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderRepositoryTest.insertOrderSubtotalTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="readOrders()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="readOrders" duration-ms="5" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readOrders -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderRepositoryTest.readOrders()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderRepositoryTest.insertOrdersTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderRepositoryTest.readOrders()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="insertOrdersTest()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="insertOrdersTest" duration-ms="2" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertOrdersTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderRepositoryTest.insertOrdersTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="teardown" is-config="true" duration-ms="9" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderRepositoryTest@c8f6f8]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- my.example.mongo.ecom.repository.test.OrderRepositoryTest -->
+      <class name="my.example.mongo.ecom.repository.test.UserRepositoryTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="8" started-at="2013-09-05T19:27:39Z" finished-at="2013-09-05T19:27:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1058" started-at="2013-09-05T19:27:39Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="insertUserTest()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="insertUserTest" duration-ms="39" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertUserTest -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.insertUserTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.insertUserTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.readsFirstPageCorrectly()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="readsFirstPageCorrectly()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="readsFirstPageCorrectly" duration-ms="17" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readsFirstPageCorrectly -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.readsFirstPageCorrectly()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.findByIdTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="findByIdTest()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="findByIdTest" duration-ms="2" started-at="2013-09-05T19:27:41Z" depends-on-methods="my.example.mongo.ecom.repository.test.UserRepositoryTest.insertUserTest" finished-at="2013-09-05T19:27:41Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected object to not be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:404)
+	at org.testng.Assert.assertNotNull(Assert.java:389)
+	at my.example.mongo.ecom.repository.test.UserRepositoryTest.findByIdTest(UserRepositoryTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:60)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:153)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findByIdTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.findByIdTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.insertDuplicateUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="insertDuplicateUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="insertDuplicateUsername" duration-ms="4" started-at="2013-09-05T19:27:41Z" depends-on-methods="my.example.mongo.ecom.repository.test.UserRepositoryTest.insertUserTest" finished-at="2013-09-05T19:27:41Z">
+          <exception class="org.testng.TestException">
+            <message>
+              <![CDATA[
+Expected exception org.springframework.dao.DuplicateKeyException but got org.testng.TestException: 
+Method UserRepositoryTest.insertDuplicateUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51] should have thrown an exception of class org.springframework.dao.DuplicateKeyException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestException: 
+Expected exception org.springframework.dao.DuplicateKeyException but got org.testng.TestException: 
+Method UserRepositoryTest.insertDuplicateUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51] should have thrown an exception of class org.springframework.dao.DuplicateKeyException
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1497)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1245)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:60)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:153)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.testng.TestException: 
+Method UserRepositoryTest.insertDuplicateUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51] should have thrown an exception of class org.springframework.dao.DuplicateKeyException
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1512)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:754)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertDuplicateUsername -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.insertDuplicateUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.updateAddressTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="updateAddressTest()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="updateAddressTest" duration-ms="4" started-at="2013-09-05T19:27:41Z" depends-on-methods="my.example.mongo.ecom.repository.test.UserRepositoryTest.insertUserTest" finished-at="2013-09-05T19:27:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateAddressTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="teardown" is-config="true" duration-ms="6" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserRepositoryTest.updateAddressTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:41Z" finished-at="2013-09-05T19:27:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- my.example.mongo.ecom.repository.test.UserRepositoryTest -->
+      <class name="my.example.mongo.ecom.repository.test.UserSearchTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="4" started-at="2013-09-05T19:27:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="setup" is-config="true" duration-ms="110" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testFindByAgeBetween()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="testFindByAgeBetween" duration-ms="18" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByAgeBetween -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserSearchTest.testFindByAgeBetween()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserSearchTest.testFindByAgeBetween()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="testFindByUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="testFindByUsername" duration-ms="3" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByUsername -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserSearchTest.testFindByUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserSearchTest.testFindByUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserSearchTest.testFindUsersByUsernamePrefix()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testFindUsersByUsernamePrefix()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="testFindUsersByUsernamePrefix" duration-ms="6" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindUsersByUsernamePrefix -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.UserSearchTest.testFindUsersByUsernamePrefix()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="teardown" is-config="true" duration-ms="5" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.UserSearchTest@ef5502]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- my.example.mongo.ecom.repository.test.UserSearchTest -->
+      <class name="my.example.mongo.ecom.repository.test.CategoryRepositoryTest">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="4" started-at="2013-09-05T19:27:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="insertCategoryWithParentTest()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="insertCategoryWithParentTest" duration-ms="7" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertCategoryWithParentTest -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertCategoryWithParentTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertCategoryWithParentTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.readCategoryWithChildren()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="readCategoryWithChildren()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="readCategoryWithChildren" duration-ms="3" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readCategoryWithChildren -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.readCategoryWithChildren()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertRootCategoryTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="insertRootCategoryTest()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="insertRootCategoryTest" duration-ms="1" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertRootCategoryTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="teardown" is-config="true" duration-ms="5" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertRootCategoryTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@152c4d9]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- my.example.mongo.ecom.repository.test.CategoryRepositoryTest -->
+      <class name="my.example.mongo.ecom.repository.test.ProductRepositoryTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="32" started-at="2013-09-05T19:27:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="setupForInsertProduct()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="setupForInsertProduct" is-config="true" duration-ms="5" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupForInsertProduct -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.ProductRepositoryTest.insertProductTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="insertProductTest()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="insertProductTest" duration-ms="7" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertProductTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.ProductRepositoryTest.insertProductTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.ProductRepositoryTest.readProduct()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="setupForInsertProduct()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="setupForInsertProduct" is-config="true" duration-ms="2" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupForInsertProduct -->
+        <test-method status="PASS" signature="readProduct()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="readProduct" duration-ms="4" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readProduct -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.ProductRepositoryTest.readProduct()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="teardown" is-config="true" duration-ms="7" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.ProductRepositoryTest@af8358]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- my.example.mongo.ecom.repository.test.ProductRepositoryTest -->
+      <class name="my.example.mongo.ecom.repository.test.OrderSearchTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="4" started-at="2013-09-05T19:27:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="setup" is-config="true" duration-ms="29" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testFindOrdersByUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="testFindOrdersByUsername" duration-ms="5" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindOrdersByUsername -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderSearchTest.testFindOrdersByUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderSearchTest.testFindOrdersByUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderSearchTest.testFindByShippingAddressCity()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testFindByShippingAddressCity()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="testFindByShippingAddressCity" duration-ms="3" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByShippingAddressCity -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.OrderSearchTest.testFindByShippingAddressCity()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="teardown" is-config="true" duration-ms="6" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.OrderSearchTest@a61164]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- my.example.mongo.ecom.repository.test.OrderSearchTest -->
+      <class name="my.example.mongo.ecom.service.test.UserServiceTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="setup" is-config="true" duration-ms="192" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testAuthenticateUser(java.lang.String, java.lang.String, boolean)[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="testAuthenticateUser" duration-ms="17" started-at="2013-09-05T19:27:40Z" data-provider="getAuthData" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAuthenticateUser -->
+        <test-method status="PASS" signature="testAuthenticateUser(java.lang.String, java.lang.String, boolean)[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="testAuthenticateUser" duration-ms="0" started-at="2013-09-05T19:27:40Z" data-provider="getAuthData" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAuthenticateUser -->
+        <test-method status="PASS" signature="testAuthenticateUser(java.lang.String, java.lang.String, boolean)[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="testAuthenticateUser" duration-ms="0" started-at="2013-09-05T19:27:40Z" data-provider="getAuthData" finished-at="2013-09-05T19:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAuthenticateUser -->
+        <test-method status="PASS" signature="testSearchUser()[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="testSearchUser" duration-ms="5" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchUser -->
+        <test-method status="PASS" signature="testRegisterUser()[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="testRegisterUser" duration-ms="1" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterUser -->
+        <test-method status="PASS" signature="testChangeAddress()[pri:0, instance:my.example.mongo.ecom.service.test.UserServiceTest@9173ef]" name="testChangeAddress" duration-ms="0" started-at="2013-09-05T19:27:40Z" finished-at="2013-09-05T19:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangeAddress -->
+      </class> <!-- my.example.mongo.ecom.service.test.UserServiceTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

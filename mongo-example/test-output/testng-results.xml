@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1746" started-at="2013-09-03T13:48:55Z" finished-at="2013-09-03T13:48:57Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1746" started-at="2013-09-03T13:48:55Z" finished-at="2013-09-03T13:48:57Z">
+      <class name="my.example.mongo.ecom.repository.test.CategoryRepositoryTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="8" started-at="2013-09-03T19:18:55Z" finished-at="2013-09-03T19:18:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1512" started-at="2013-09-03T19:18:55Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2013-09-03T19:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertCategoryWithParentTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="insertCategoryWithParentTest()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="insertCategoryWithParentTest" duration-ms="142" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertCategoryWithParentTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertCategoryWithParentTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="insertRootCategoryTest()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="insertRootCategoryTest" duration-ms="5" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertRootCategoryTest -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertRootCategoryTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.insertRootCategoryTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="readCategoryWithChildren()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="readCategoryWithChildren" duration-ms="36" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readCategoryWithChildren -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.readCategoryWithChildren()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void my.example.mongo.ecom.repository.test.CategoryRepositoryTest.readCategoryWithChildren()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="teardown" is-config="true" duration-ms="12" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:my.example.mongo.ecom.repository.test.CategoryRepositoryTest@44d3db51]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2013-09-03T19:18:57Z" finished-at="2013-09-03T19:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- my.example.mongo.ecom.repository.test.CategoryRepositoryTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -9,7 +9,7 @@ import java.util.List;
  * @author vishalshu
  * 
  */
-public interface IOrder {
+public interface IOrder extends IBaseEntity{
 
 	String getId();
 

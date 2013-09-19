@@ -7,7 +7,7 @@ import java.util.Map;
  * @author vishalshu
  * 
  */
-public interface IProduct {
+public interface IProduct extends IBaseEntity{
 
 	/**
 	 * @param

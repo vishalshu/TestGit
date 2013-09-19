@@ -1,13 +1,15 @@
 package my.example.mongo.ecom.service;
 
-import java.util.List;
-
 import my.example.mongo.ecom.model.IAddress;
 import my.example.mongo.ecom.model.IUser;
+
+import java.util.LinkedHashSet;
 
 public interface IUserService {
 	IUser registerUser(IUser user);
 
+	boolean authenticateUser(String username, String password);
+	
 	/**
 	 * Search for users by username, firstName or lastName. Allows partial
 	 * matches.
@@ -15,8 +17,8 @@ public interface IUserService {
 	 * @param searchKey
 	 * @return
 	 */
-	List<IUser> searchUsers(String searchKey);
+	LinkedHashSet<IUser> searchUsers(String searchKey);
 
-	boolean changeAddress(String userId, IAddress address);
+	boolean changeAddress(String username, IAddress address);
 
 }

@@ -7,7 +7,7 @@ package my.example.mongo.ecom.model;
  * @author vishalshu
  *
  */
-public interface IUser {
+public interface IUser extends IBaseEntity{
 
 	String getId();
 	

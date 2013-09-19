@@ -3,16 +3,15 @@
  */
 package my.example.mongo.ecom.model.impl;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 import my.example.mongo.ecom.model.ICategory;
 import my.example.mongo.ext.CascadeSave;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * @author vishalshu

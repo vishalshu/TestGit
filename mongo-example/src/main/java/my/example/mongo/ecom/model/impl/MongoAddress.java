@@ -4,7 +4,6 @@
 package my.example.mongo.ecom.model.impl;
 
 import my.example.mongo.ecom.model.IAddress;
-
 import org.springframework.data.mongodb.core.index.Indexed;
 
 /**

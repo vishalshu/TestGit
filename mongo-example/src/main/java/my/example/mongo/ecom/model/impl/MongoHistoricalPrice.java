@@ -3,9 +3,9 @@
  */
 package my.example.mongo.ecom.model.impl;
 
-import java.util.Date;
-
 import my.example.mongo.ecom.model.IHistoricalPrice;
+
+import java.util.Date;
 
 /**
  * @author vishalshu

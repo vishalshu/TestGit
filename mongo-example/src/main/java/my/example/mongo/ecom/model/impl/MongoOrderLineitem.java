@@ -5,7 +5,6 @@ package my.example.mongo.ecom.model.impl;
 
 import my.example.mongo.ecom.model.IOrderLineitem;
 import my.example.mongo.ecom.model.IPrice;
-
 import org.springframework.data.annotation.Id;
 
 /**

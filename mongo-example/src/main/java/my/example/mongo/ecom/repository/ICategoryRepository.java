@@ -4,13 +4,7 @@
 package my.example.mongo.ecom.repository;
 
 import my.example.mongo.ecom.model.impl.MongoCategory;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener;
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Component;
-
-import com.mongodb.DBObject;
 
 /**
  * @author vishalshu

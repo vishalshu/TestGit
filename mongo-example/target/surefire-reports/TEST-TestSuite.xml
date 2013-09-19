@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="2" time="2.496" errors="0" skipped="0" tests="24" name="TestSuite">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin"/>
+    <property name="java.vm.version" value="20.6-b01"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\vishalshu\vish-testgit\TestGit\mongo-example"/>
+    <property name="java.runtime.version" value="1.6.0_31-b05"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="C:\Users\vishalshu\vish-testgit\TestGit\mongo-example"/>
+    <property name="java.endorsed.dirs" value="c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="surefire.real.class.path" value="C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\surefire\surefirebooter1742475200890850174.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\VISHAL~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;D:\apache-maven-3.0.3/bin;C:\Program Files\Java\jdk1.6.0_25/bin;C:\Program Files (x86)\CVSNT\;D:\Softwares\LIFERAY_LAB-6.1.0\apache-ant-1.7.1\bin;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
+    <property name="surefire.test.class.path" value="C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\test-classes;C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\classes;C:\Users\vishalshu\.m2\repository\org\springframework\data\spring-data-mongodb\1.2.3.RELEASE\spring-data-mongodb-1.2.3.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-tx\3.1.4.RELEASE\spring-tx-3.1.4.RELEASE.jar;C:\Users\vishalshu\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-beans\3.1.4.RELEASE\spring-beans-3.1.4.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-expression\3.1.4.RELEASE\spring-expression-3.1.4.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\data\spring-data-commons\1.5.2.RELEASE\spring-data-commons-1.5.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\slf4j\slf4j-api\1.7.1\slf4j-api-1.7.1.jar;C:\Users\vishalshu\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.1\jcl-over-slf4j-1.7.1.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-apt\2.8.0\querydsl-apt-2.8.0.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-codegen\2.8.0\querydsl-codegen-2.8.0.jar;C:\Users\vishalshu\.m2\repository\com\mysema\codegen\codegen\0.5.4\codegen-0.5.4.jar;C:\Users\vishalshu\.m2\repository\org\eclipse\jdt\core\compiler\ecj\3.7.2\ecj-3.7.2.jar;C:\Users\vishalshu\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-jdo\2.8.0\querydsl-jdo-2.8.0.jar;C:\Users\vishalshu\.m2\repository\javax\jdo\jdo-api\3.0\jdo-api-3.0.jar;C:\Users\vishalshu\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-core\2.8.0\querydsl-core-2.8.0.jar;C:\Users\vishalshu\.m2\repository\com\google\guava\guava\11.0.2\guava-11.0.2.jar;C:\Users\vishalshu\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\vishalshu\.m2\repository\com\mysema\commons\mysema-commons-lang\0.2.4\mysema-commons-lang-0.2.4.jar;C:\Users\vishalshu\.m2\repository\cglib\cglib\2.2\cglib-2.2.jar;C:\Users\vishalshu\.m2\repository\asm\asm\3.1\asm-3.1.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-mongodb\2.8.0\querydsl-mongodb-2.8.0.jar;C:\Users\vishalshu\.m2\repository\org\mongodb\mongo-java-driver\2.9.1\mongo-java-driver-2.9.1.jar;C:\Users\vishalshu\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\vishalshu\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\vishalshu\.m2\repository\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\mockito\mockito-all\1.9.5-rc1\mockito-all-1.9.5-rc1.jar;C:\Users\vishalshu\.m2\repository\org\testng\testng\6.8\testng-6.8.jar;C:\Users\vishalshu\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\vishalshu\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\vishalshu\.m2\repository\org\beanshell\bsh\2.0b4\bsh-2.0b4.jar;C:\Users\vishalshu\.m2\repository\com\beust\jcommander\1.27\jcommander-1.27.jar;C:\Users\vishalshu\.m2\repository\org\yaml\snakeyaml\1.6\snakeyaml-1.6.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\vishalshu"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="vishalshu"/>
+    <property name="java.class.path" value="C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\test-classes;C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\classes;C:\Users\vishalshu\.m2\repository\org\springframework\data\spring-data-mongodb\1.2.3.RELEASE\spring-data-mongodb-1.2.3.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-tx\3.1.4.RELEASE\spring-tx-3.1.4.RELEASE.jar;C:\Users\vishalshu\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-beans\3.1.4.RELEASE\spring-beans-3.1.4.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-expression\3.1.4.RELEASE\spring-expression-3.1.4.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\data\spring-data-commons\1.5.2.RELEASE\spring-data-commons-1.5.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\slf4j\slf4j-api\1.7.1\slf4j-api-1.7.1.jar;C:\Users\vishalshu\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.1\jcl-over-slf4j-1.7.1.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-apt\2.8.0\querydsl-apt-2.8.0.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-codegen\2.8.0\querydsl-codegen-2.8.0.jar;C:\Users\vishalshu\.m2\repository\com\mysema\codegen\codegen\0.5.4\codegen-0.5.4.jar;C:\Users\vishalshu\.m2\repository\org\eclipse\jdt\core\compiler\ecj\3.7.2\ecj-3.7.2.jar;C:\Users\vishalshu\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-jdo\2.8.0\querydsl-jdo-2.8.0.jar;C:\Users\vishalshu\.m2\repository\javax\jdo\jdo-api\3.0\jdo-api-3.0.jar;C:\Users\vishalshu\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-core\2.8.0\querydsl-core-2.8.0.jar;C:\Users\vishalshu\.m2\repository\com\google\guava\guava\11.0.2\guava-11.0.2.jar;C:\Users\vishalshu\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\vishalshu\.m2\repository\com\mysema\commons\mysema-commons-lang\0.2.4\mysema-commons-lang-0.2.4.jar;C:\Users\vishalshu\.m2\repository\cglib\cglib\2.2\cglib-2.2.jar;C:\Users\vishalshu\.m2\repository\asm\asm\3.1\asm-3.1.jar;C:\Users\vishalshu\.m2\repository\com\mysema\querydsl\querydsl-mongodb\2.8.0\querydsl-mongodb-2.8.0.jar;C:\Users\vishalshu\.m2\repository\org\mongodb\mongo-java-driver\2.9.1\mongo-java-driver-2.9.1.jar;C:\Users\vishalshu\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\vishalshu\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\vishalshu\.m2\repository\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;C:\Users\vishalshu\.m2\repository\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;C:\Users\vishalshu\.m2\repository\org\mockito\mockito-all\1.9.5-rc1\mockito-all-1.9.5-rc1.jar;C:\Users\vishalshu\.m2\repository\org\testng\testng\6.8\testng-6.8.jar;C:\Users\vishalshu\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\vishalshu\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\vishalshu\.m2\repository\org\beanshell\bsh\2.0b4\bsh-2.0b4.jar;C:\Users\vishalshu\.m2\repository\com\beust\jcommander\1.27\jcommander-1.27.jar;C:\Users\vishalshu\.m2\repository\org\yaml\snakeyaml\1.6\snakeyaml-1.6.jar;"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre"/>
+    <property name="sun.java.command" value="C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\surefire\surefirebooter1742475200890850174.jar C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\surefire\surefire7400812768143772543tmp C:\Users\vishalshu\vish-testgit\TestGit\mongo-example\target\surefire\surefire8224393834708901316tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.6.0_31"/>
+    <property name="java.ext.dirs" value="c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\resources.jar;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\rt.jar;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\sunrsasign.jar;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\jsse.jar;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\jce.jar;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\charsets.jar;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\lib\modules\jdk.boot.jar;c:\program files (x86)\jetbrains\intellij idea community edition 11.1.3\jre\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="C:\Users\vishalshu\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.038" classname="my.example.mongo.ecom.repository.test.UserRepositoryTest" name="insertUserTest"/>
+  <testcase time="0.017" classname="my.example.mongo.ecom.repository.test.UserRepositoryTest" name="readsFirstPageCorrectly"/>
+  <testcase time="0.019" classname="my.example.mongo.ecom.repository.test.OrderRepositoryTest" name="insertOrderSubtotalTest"/>
+  <testcase time="0.005" classname="my.example.mongo.ecom.repository.test.OrderRepositoryTest" name="readOrders"/>
+  <testcase time="0.002" classname="my.example.mongo.ecom.repository.test.OrderRepositoryTest" name="insertOrdersTest"/>
+  <testcase time="0.018" classname="my.example.mongo.ecom.service.test.UserServiceTest" name="testAuthenticateUser"/>
+  <testcase time="0" classname="my.example.mongo.ecom.service.test.UserServiceTest" name="testAuthenticateUser"/>
+  <testcase time="0" classname="my.example.mongo.ecom.service.test.UserServiceTest" name="testAuthenticateUser"/>
+  <testcase time="0.005" classname="my.example.mongo.ecom.service.test.UserServiceTest" name="testSearchUser"/>
+  <testcase time="0.001" classname="my.example.mongo.ecom.service.test.UserServiceTest" name="testRegisterUser"/>
+  <testcase time="0" classname="my.example.mongo.ecom.service.test.UserServiceTest" name="testChangeAddress"/>
+  <testcase time="0.007" classname="my.example.mongo.ecom.repository.test.ProductRepositoryTest" name="insertProductTest"/>
+  <testcase time="0.004" classname="my.example.mongo.ecom.repository.test.ProductRepositoryTest" name="readProduct"/>
+  <testcase time="0.018" classname="my.example.mongo.ecom.repository.test.UserSearchTest" name="testFindByAgeBetween"/>
+  <testcase time="0.003" classname="my.example.mongo.ecom.repository.test.UserSearchTest" name="testFindByUsername"/>
+  <testcase time="0.006" classname="my.example.mongo.ecom.repository.test.UserSearchTest" name="testFindUsersByUsernamePrefix"/>
+  <testcase time="0.006" classname="my.example.mongo.ecom.repository.test.CategoryRepositoryTest" name="insertCategoryWithParentTest"/>
+  <testcase time="0.003" classname="my.example.mongo.ecom.repository.test.CategoryRepositoryTest" name="readCategoryWithChildren"/>
+  <testcase time="0.001" classname="my.example.mongo.ecom.repository.test.CategoryRepositoryTest" name="insertRootCategoryTest"/>
+  <testcase time="0.005" classname="my.example.mongo.ecom.repository.test.OrderSearchTest" name="testFindOrdersByUsername"/>
+  <testcase time="0.003" classname="my.example.mongo.ecom.repository.test.OrderSearchTest" name="testFindByShippingAddressCity"/>
+  <testcase time="0.003" classname="my.example.mongo.ecom.repository.test.UserRepositoryTest" name="findByIdTest">
+    <failure message="expected object to not be null" type="java.lang.AssertionError">java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:404)
+	at org.testng.Assert.assertNotNull(Assert.java:389)
+	at my.example.mongo.ecom.repository.test.UserRepositoryTest.findByIdTest(UserRepositoryTest.java:58)
+</failure>
+  </testcase>
+  <testcase time="0.007" classname="my.example.mongo.ecom.repository.test.UserRepositoryTest" name="insertDuplicateUsername">
+    <failure message="
+Method UserRepositoryTest.insertDuplicateUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51] should have thrown an exception of class org.springframework.dao.DuplicateKeyException" type="org.testng.TestException">org.testng.TestException: 
+Method UserRepositoryTest.insertDuplicateUsername()[pri:0, instance:my.example.mongo.ecom.repository.test.UserRepositoryTest@1d9fd51] should have thrown an exception of class org.springframework.dao.DuplicateKeyException
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1512)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:754)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:60)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:153)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</failure>
+  </testcase>
+  <testcase time="0.004" classname="my.example.mongo.ecom.repository.test.UserRepositoryTest" name="updateAddressTest"/>
+</testsuite>

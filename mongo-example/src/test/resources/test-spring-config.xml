@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+		http://www.springframework.org/schema/data/mongo
+          http://www.springframework.org/schema/data/mongo/spring-mongo-1.1.xsd">
+	<mongo:mongo host="127.0.0.1" port="27017" />
+	<mongo:db-factory id="testMongoDbFactory" dbname="ecom-test"
+		write-concern="SAFE" />
+
+	<bean id="testMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"
+		lazy-init="false">
+		<constructor-arg name="mongoDbFactory" ref="testMongoDbFactory" />
+	</bean>
+
+	<bean class="my.example.mongo.ext.CascadingMongoEventListener" />
+
+	<mongo:repositories base-package="my.example.mongo.*.repository"
+		mongo-template-ref="testMongoTemplate">
+	</mongo:repositories>
+</beans>

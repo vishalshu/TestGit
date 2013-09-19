@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="my.example.mongo.ecom.repository.test.ProductRepositoryTest">
+        <methods>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="teardown"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="setupForInsertProduct"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- my.example.mongo.ecom.repository.test.ProductRepositoryTest -->
+      <class name="my.example.mongo.ecom.repository.test.UserSearchTest">
+        <methods>
+          <include name="setup"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="teardown"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- my.example.mongo.ecom.repository.test.UserSearchTest -->
+      <class name="my.example.mongo.ecom.repository.test.OrderRepositoryTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- my.example.mongo.ecom.repository.test.OrderRepositoryTest -->
+      <class name="my.example.mongo.ecom.repository.test.OrderSearchTest">
+        <methods>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="teardown"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- my.example.mongo.ecom.repository.test.OrderSearchTest -->
+      <class name="my.example.mongo.ecom.service.test.UserServiceTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- my.example.mongo.ecom.service.test.UserServiceTest -->
+      <class name="my.example.mongo.ecom.repository.test.CategoryRepositoryTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- my.example.mongo.ecom.repository.test.CategoryRepositoryTest -->
+      <class name="my.example.mongo.ecom.repository.test.UserRepositoryTest">
+        <methods>
+          <include name="insertDuplicateUsername"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="teardown"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="insertUserTest"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="findByIdTest"/>
+        </methods>
+      </class> <!-- my.example.mongo.ecom.repository.test.UserRepositoryTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

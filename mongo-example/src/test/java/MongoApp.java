@@ -1,18 +1,16 @@
-import static org.springframework.data.mongodb.core.query.Criteria.where;
-import static org.springframework.data.mongodb.core.query.Query.query;
-import static org.springframework.data.mongodb.core.query.Update.update;
-
-import java.util.List;
-
+import com.mongodb.Mongo;
+import com.mongodb.WriteConcern.Majority;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.mongodb.Mongo;
-import com.mongodb.WriteConcern.Majority;
+import java.util.List;
+
+import static org.springframework.data.mongodb.core.query.Criteria.where;
+import static org.springframework.data.mongodb.core.query.Query.query;
+import static org.springframework.data.mongodb.core.query.Update.update;
 
 public class MongoApp {
 	private static final Log log = LogFactory.getLog(MongoApp.class);

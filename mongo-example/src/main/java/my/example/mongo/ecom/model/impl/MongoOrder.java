@@ -3,17 +3,14 @@
  */
 package my.example.mongo.ecom.model.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import my.example.mongo.ecom.model.IAddress;
 import my.example.mongo.ecom.model.IOrder;
 import my.example.mongo.ecom.model.IOrderLineitem;
-import my.example.mongo.ecom.model.IUser;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author vishalshu
@@ -24,16 +21,17 @@ public class MongoOrder implements IOrder {
 	@Id
 	private String id;
 	@DBRef
-	private IUser user;
+	private MongoUser user;
 	private List<IOrderLineitem> lineitems = new ArrayList<IOrderLineitem>();
-	private IAddress shippingAddress;
+	private MongoAddress shippingAddress;
 	private Long subtotal = 0l;
 
 	public MongoOrder() {
 	}
 
-	public MongoOrder(IUser user) {
+	public MongoOrder(MongoUser user) {
 		shippingAddress = user.getAddress();
+		this.user = user;
 	}
 
 	public String getId() {
@@ -44,11 +42,11 @@ public class MongoOrder implements IOrder {
 		this.id = id;
 	}
 
-	public IUser getUser() {
+	public MongoUser getUser() {
 		return user;
 	}
 
-	public void setUser(IUser user) {
+	public void setUser(MongoUser user) {
 		this.user = user;
 	}
 
@@ -62,11 +60,11 @@ public class MongoOrder implements IOrder {
 		}
 	}
 
-	public IAddress getShippingAddress() {
+	public MongoAddress getShippingAddress() {
 		return shippingAddress;
 	}
 
-	public void setShippingAddress(IAddress shippingAddress) {
+	public void setShippingAddress(MongoAddress shippingAddress) {
 		this.shippingAddress = shippingAddress;
 	}
 
@@ -74,7 +72,6 @@ public class MongoOrder implements IOrder {
 		return subtotal;
 	}
 
-	@Override
 	public void addLineitem(IOrderLineitem lineitem) {
 		lineitems.add(lineitem);
 		subtotal += lineitem.getPrice().getSalePrice();

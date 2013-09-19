@@ -7,7 +7,7 @@
 	<name>ecommerce-example</name>
 	<description>Ecommerce Example</description>
 
-	<!-- <build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
@@ -26,15 +26,18 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.2.1.RELEASE</version>
+			<version>1.2.3.RELEASE</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+       
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -68,6 +71,12 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+            <version>2.8.0</version>
+        </dependency>
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongo-java-driver</artifactId>
@@ -95,12 +104,21 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5-rc1</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+       
+      
 	</dependencies>
 
 </project>

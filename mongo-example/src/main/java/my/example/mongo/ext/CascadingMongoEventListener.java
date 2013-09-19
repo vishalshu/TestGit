@@ -1,14 +1,13 @@
 package my.example.mongo.ext;
 
-import java.lang.reflect.Field;
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener;
 import org.springframework.util.ReflectionUtils;
+
+import java.lang.reflect.Field;
 
 public class CascadingMongoEventListener extends AbstractMongoEventListener {
 	@Autowired

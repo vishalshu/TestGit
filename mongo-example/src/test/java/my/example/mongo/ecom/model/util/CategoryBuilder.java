@@ -3,9 +3,9 @@
  */
 package my.example.mongo.ecom.model.util;
 
-import java.util.UUID;
-
 import my.example.mongo.ecom.model.impl.MongoCategory;
+
+import java.util.UUID;
 
 /**
  * @author vishalshu

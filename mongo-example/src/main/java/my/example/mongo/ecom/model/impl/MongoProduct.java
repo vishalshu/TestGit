@@ -3,22 +3,17 @@
  */
 package my.example.mongo.ecom.model.impl;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
-
 import my.example.mongo.ecom.model.ICategory;
 import my.example.mongo.ecom.model.IHistoricalPrice;
 import my.example.mongo.ecom.model.IPrice;
 import my.example.mongo.ecom.model.IProduct;
 import my.example.mongo.ext.CascadeSave;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.*;
 
 /**
  * @author vishalshu

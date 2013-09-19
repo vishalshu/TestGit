@@ -9,15 +9,9 @@ import java.util.Collection;
  * @author vishalshu
  * 
  */
-public interface ICategory {
+public interface ICategory extends IBaseEntity{
 
-	/**
-	 * @param
-	 * @return the category id
-	 */
-	String getId();
-
-	/**
+    /**
 	 * @param
 	 * @return the category name
 	 */

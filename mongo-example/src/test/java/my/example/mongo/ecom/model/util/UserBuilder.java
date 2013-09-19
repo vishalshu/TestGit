@@ -3,10 +3,10 @@
  */
 package my.example.mongo.ecom.model.util;
 
-import java.util.UUID;
-
 import my.example.mongo.ecom.model.impl.MongoAddress;
 import my.example.mongo.ecom.model.impl.MongoUser;
+
+import java.util.UUID;
 
 /**
  * @author vishalshu
@@ -22,6 +22,8 @@ public class UserBuilder {
 		user.setPassword("password");
 		user.setAge(25);
 		user.setAddress(addressBuilder.build());
+		user.setFirstName("First");
+		user.setLastName("Last");
 	}
 
 	public static UserBuilder aNew() {
@@ -45,6 +47,16 @@ public class UserBuilder {
 
 	public UserBuilder withPassword(String password) {
 		user.setPassword(password);
+		return this;
+	}
+
+	public UserBuilder withFirstName(String firstName) {
+		user.setFirstName(firstName);
+		return this;
+	}
+
+	public UserBuilder withLastName(String lastName) {
+		user.setLastName(lastName);
 		return this;
 	}
 

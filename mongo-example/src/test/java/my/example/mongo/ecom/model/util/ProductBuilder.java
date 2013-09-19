@@ -3,11 +3,11 @@
  */
 package my.example.mongo.ecom.model.util;
 
-import java.util.UUID;
-
 import my.example.mongo.ecom.model.ICategory;
 import my.example.mongo.ecom.model.impl.MongoPrice;
 import my.example.mongo.ecom.model.impl.MongoProduct;
+
+import java.util.UUID;
 
 /**
  * @author vishalshu

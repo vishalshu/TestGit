@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TEST Ex" verbose="2">
+    <test name="NOTE" preserve-order="false" verbose="1" parallel="false">
+        <!-- <packages >
+            <package name="my.example.mongo.ecom.repository.test">
+
+            </package>
+        </packages>-->
+        <classes>
+            <class name="my.example.mongo.ecom.repository.test.UserRepositoryTest">
+            </class>
+            <class name="my.example.mongo.ecom.repository.test.UserSearchTest">
+            </class>
+            <class name="my.example.mongo.ecom.repository.test.ProductRepositoryTest">
+            </class>
+            <class name="my.example.mongo.ecom.repository.test.OrderRepositoryTest">
+
+            </class>
+            <class name="my.example.mongo.ecom.repository.test.OrderSearchTest">
+
+            </class>
+            <class name="my.example.mongo.ecom.repository.test.CategoryRepositoryTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>

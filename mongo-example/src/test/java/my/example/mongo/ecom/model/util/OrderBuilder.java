@@ -1,8 +1,8 @@
 package my.example.mongo.ecom.model.util;
 
 import my.example.mongo.ecom.model.IOrderLineitem;
-import my.example.mongo.ecom.model.IUser;
 import my.example.mongo.ecom.model.impl.MongoOrder;
+import my.example.mongo.ecom.model.impl.MongoUser;
 
 public class OrderBuilder {
 	private MongoOrder order;
@@ -10,11 +10,11 @@ public class OrderBuilder {
 	/**
 	 * 
 	 */
-	private OrderBuilder(IUser user) {
+	private OrderBuilder(MongoUser user) {
 		order = new MongoOrder(user);
 	}
 
-	public static OrderBuilder aNew(IUser user) {
+	public static OrderBuilder aNew(MongoUser user) {
 		return new OrderBuilder(user);
 	}
 
